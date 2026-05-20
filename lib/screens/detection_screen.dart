@@ -5,6 +5,9 @@ import 'package:image_picker/image_picker.dart';
 
 import '../services/similarity_service.dart';
 import '../services/tflite_service.dart';
+import 'result_screen.dart';
+
+import '../services/metadata_service.dart';
 
 class DetectionScreen extends StatefulWidget {
 
@@ -26,6 +29,7 @@ class _DetectionScreenState extends State<DetectionScreen> {
   final TFLiteService tfliteService = TFLiteService();
 
   final SimilarityService similarityService = SimilarityService();
+  final MetadataService metadataService = MetadataService();
 
   @override
   void initState() {
@@ -73,6 +77,9 @@ class _DetectionScreenState extends State<DetectionScreen> {
     setState(() {
       isLoading = true;
     });
+    await Future.delayed(
+      const Duration(milliseconds: 2000),
+    );
 
     try {
 
@@ -86,18 +93,34 @@ class _DetectionScreenState extends State<DetectionScreen> {
         embedding,
       );
 
-      setState(() {
+      final diseaseData =
+        await metadataService.loadDiseaseData();
 
-        prediction =
-        "${result['disease']}\nConfidence: ${result['confidence']}%";
+        Navigator.push(
 
-      });
+          context,
+
+          MaterialPageRoute(
+
+            builder: (_) => ResultScreen(
+
+              image: selectedImage!,
+
+              result: result,
+
+              diseaseData: diseaseData,
+
+            ),
+
+          ),
+
+        );
 
     } catch (e) {
 
       setState(() {
 
-        prediction = "Error: $e";
+        prediction = "Unable to analyze image.";
 
       });
 
@@ -138,9 +161,45 @@ class _DetectionScreenState extends State<DetectionScreen> {
                 ),
 
                 child: selectedImage == null
-                    ? const Center(
-                  child: Text("No Image Selected"),
-                )
+                  ? Center(
+
+                child: Column(
+
+                  mainAxisAlignment:
+                  MainAxisAlignment.center,
+
+                  children: [
+
+                    Icon(
+                      Icons.document_scanner,
+                      size: 80,
+                      color: Colors.teal.shade300,
+                    ),
+
+                    const SizedBox(height: 20),
+
+                    const Text(
+                      "Upload Poultry Image",
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+
+                    const SizedBox(height: 10),
+
+                    Text(
+                      "AI will analyze disease patterns",
+                      style: TextStyle(
+                        color: Colors.grey.shade600,
+                      ),
+                    ),
+
+                  ],
+
+                ),
+
+              )
                     : ClipRRect(
                   borderRadius: BorderRadius.circular(24),
                   child: Image.file(
@@ -156,7 +215,106 @@ class _DetectionScreenState extends State<DetectionScreen> {
             const SizedBox(height: 20),
 
             if (isLoading)
-              const CircularProgressIndicator(),
+
+              Container(
+
+                margin: const EdgeInsets.only(
+                  bottom: 20,
+                ),
+
+                padding: const EdgeInsets.all(20),
+
+                decoration: BoxDecoration(
+
+                  color: Colors.white,
+
+                  borderRadius:
+                  BorderRadius.circular(24),
+
+                  boxShadow: [
+
+                    BoxShadow(
+                      color:
+                      Colors.black.withOpacity(0.05),
+                      blurRadius: 10,
+                      offset: const Offset(0, 5),
+                    ),
+
+                  ],
+
+                ),
+
+                child: Column(
+
+                  children: [
+
+                    SizedBox(
+
+                      height: 80,
+                      width: 80,
+
+                      child: Stack(
+
+                        alignment: Alignment.center,
+
+                        children: [
+
+                          CircularProgressIndicator(
+
+                            strokeWidth: 6,
+
+                            color: Colors.teal.shade400,
+
+                          ),
+
+                          Icon(
+                            Icons.document_scanner,
+                            color: Colors.teal.shade400,
+                            size: 35,
+                          ),
+
+                        ],
+
+                      ),
+
+                    ),
+
+                    const SizedBox(height: 20),
+
+                    const Text(
+
+                      "AI Scanning in Progress",
+
+                      style: TextStyle(
+
+                        fontSize: 20,
+
+                        fontWeight: FontWeight.bold,
+
+                      ),
+
+                    ),
+
+                    const SizedBox(height: 10),
+
+                    Text(
+
+                      "Analyzing poultry disease patterns...",
+
+                      textAlign: TextAlign.center,
+
+                      style: TextStyle(
+                        color: Colors.grey.shade700,
+                        height: 1.5,
+                      ),
+
+                    ),
+
+                  ],
+
+                ),
+
+              ),
 
             if (prediction.isNotEmpty)
 

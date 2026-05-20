@@ -23,6 +23,7 @@ class SimilarityService {
     double dotProduct = 0;
 
     double normA = 0;
+
     double normB = 0;
 
     for (int i = 0; i < a.length; i++) {
@@ -51,6 +52,8 @@ class SimilarityService {
 
     String bestDisease = "Unknown";
 
+    String matchedImage = "";
+
     for (var item in embeddings) {
 
       List<dynamic> embeddingDynamic = item['embedding'];
@@ -70,13 +73,21 @@ class SimilarityService {
 
         bestDisease = item['disease'];
 
+        matchedImage = item['image'];
+
       }
 
     }
 
     return {
+
       'disease': bestDisease,
-      'confidence': (bestScore * 100).toStringAsFixed(2),
+
+      'confidence': (bestScore * 100)
+          .toStringAsFixed(2),
+
+      'matched_image': matchedImage,
+
     };
 
   }

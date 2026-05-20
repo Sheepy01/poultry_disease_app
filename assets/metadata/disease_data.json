@@ -1,0 +1,97 @@
+{
+  "newcastle_disease": {
+
+    "display_name": "Newcastle Disease",
+
+    "overview":
+      "Newcastle disease is a highly contagious viral disease affecting poultry birds. It spreads rapidly and may cause severe mortality.",
+
+    "mortality":
+      "Very High (>90%)",
+
+    "symptoms": [
+
+      "Twisted neck",
+
+      "Green-white diarrhea",
+
+      "Facial swelling",
+
+      "Paralysis of legs or wings",
+
+      "Respiratory distress",
+
+      "Drooping wings",
+
+      "Open-mouth breathing",
+
+      "Bluish comb"
+
+    ],
+
+    "treatment":
+      "No specific treatment is available for Newcastle disease.",
+
+    "immediate_actions": [
+
+      "Isolate infected birds",
+
+      "Disinfect the farm",
+
+      "Consult veterinarian immediately",
+
+      "Restrict visitor access",
+
+      "Safely dispose dead birds"
+
+    ],
+
+    "differential_diagnosis": [
+
+      "Infectious Bronchitis",
+
+      "Fowl Cholera",
+
+      "Mycoplasmosis",
+
+      "Infectious Coryza"
+
+    ],
+
+    "images": {
+
+      "newcastle_1.jpg": {
+        "finding":
+          "Green-white mucous diarrhea observed."
+      },
+
+      "newcastle_2.jpg": {
+        "finding":
+          "Facial swelling observed."
+      },
+
+      "newcastle_3.jpg": {
+        "finding":
+          "Twisted neck symptom observed."
+      },
+
+      "newcastle_4.jpg": {
+        "finding":
+          "Paralysis symptom observed."
+      },
+
+      "newcastle_5.jpg": {
+        "finding":
+          "Drooping wings observed."
+      },
+
+      "newcastle_6.jpg": {
+        "finding":
+          "Bluish comb symptom observed."
+      }
+
+    }
+
+  }
+
+}
