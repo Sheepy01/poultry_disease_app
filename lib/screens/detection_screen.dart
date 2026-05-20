@@ -3,6 +3,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../services/similarity_service.dart';
+import '../services/tflite_service.dart';
+
 class DetectionScreen extends StatefulWidget {
 
   const DetectionScreen({super.key});
@@ -16,6 +19,29 @@ class _DetectionScreenState extends State<DetectionScreen> {
 
   File? selectedImage;
 
+  String prediction = "";
+
+  bool isLoading = false;
+
+  final TFLiteService tfliteService = TFLiteService();
+
+  final SimilarityService similarityService = SimilarityService();
+
+  @override
+  void initState() {
+
+    super.initState();
+
+    loadModel();
+
+  }
+
+  Future<void> loadModel() async {
+
+    await tfliteService.loadModel();
+
+  }
+
   Future<void> pickImage() async {
 
     final picker = ImagePicker();
@@ -27,10 +53,59 @@ class _DetectionScreenState extends State<DetectionScreen> {
     if (pickedFile != null) {
 
       setState(() {
+
         selectedImage = File(pickedFile.path);
+
+        prediction = "";
+
+      });
+
+      await detectDisease();
+
+    }
+
+  }
+
+  Future<void> detectDisease() async {
+
+    if (selectedImage == null) return;
+
+    setState(() {
+      isLoading = true;
+    });
+
+    try {
+
+      List<double> embedding =
+      await tfliteService.extractEmbedding(
+        selectedImage!,
+      );
+
+      final result =
+      await similarityService.findBestMatch(
+        embedding,
+      );
+
+      setState(() {
+
+        prediction =
+        "${result['disease']}\nConfidence: ${result['confidence']}%";
+
+      });
+
+    } catch (e) {
+
+      setState(() {
+
+        prediction = "Error: $e";
+
       });
 
     }
+
+    setState(() {
+      isLoading = false;
+    });
 
   }
 
@@ -79,6 +154,28 @@ class _DetectionScreenState extends State<DetectionScreen> {
             ),
 
             const SizedBox(height: 20),
+
+            if (isLoading)
+              const CircularProgressIndicator(),
+
+            if (prediction.isNotEmpty)
+
+              Padding(
+
+                padding: const EdgeInsets.symmetric(
+                  vertical: 20,
+                ),
+
+                child: Text(
+                  prediction,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+
+              ),
 
             SizedBox(
 
