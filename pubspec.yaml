@@ -63,11 +63,12 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-    - assets/models/
-    - assets/embeddings/
-    - assets/dataset/
+    - assets/dataset/newcastle_disease/
+    - assets/dataset/aflatoxicosis/
     - assets/metadata/
     - assets/images/
+    - assets/models/
+    - assets/embeddings/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

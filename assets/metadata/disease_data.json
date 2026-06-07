@@ -92,6 +92,94 @@
 
     }
 
+  },
+  "aflatoxicosis": {
+
+    "display_name": "Aflatoxicosis",
+
+    "overview":
+      "A toxin-related disease caused by aflatoxin-contaminated feed. It primarily damages the liver and can result in poor growth, weakness, and significant mortality in poultry.",
+
+    "mortality":
+      "Moderate to High depending on toxin exposure",
+
+    "symptoms": [
+
+      "Weakness",
+
+      "Poor growth",
+
+      "Unthriftiness",
+
+      "High morbidity",
+
+      "High mortality",
+
+      "Depression",
+
+      "Reduced feed efficiency"
+
+    ],
+
+    "treatment":
+      "No specific treatment is available. Remove contaminated feed and provide supportive care.",
+
+    "immediate_actions": [
+
+      "Remove contaminated feed immediately",
+
+      "Provide clean uncontaminated feed",
+
+      "Supplement Vitamin E",
+
+      "Supplement Vitamin C",
+
+      "Supplement Selenium",
+
+      "Treat secondary infections",
+
+      "Improve farm management",
+
+      "Provide activated charcoal if recommended"
+
+    ],
+
+    "differential_diagnosis": [
+
+      "Fatty Liver Syndrome",
+
+      "Hepatitis",
+
+      "Feed Toxicity",
+
+      "Nutritional Deficiencies"
+
+    ],
+
+    "images": {
+
+      "aflatoxicosis_1.png": {
+        "finding": "Bird lying on abdomen with legs extended backward."
+      },
+
+      "aflatoxicosis_2.png": {
+        "finding": "Liver enlargement and discoloration observed."
+      },
+
+      "aflatoxicosis_3.png": {
+        "finding": "Yellow fatty liver appearance observed."
+      },
+
+      "aflatoxicosis_4.png": {
+        "finding": "Liver congestion observed."
+      },
+
+      "aflatoxicosis_5.png": {
+        "finding": "Hemorrhagic lesions observed."
+      }
+
+    }
+
   }
 
 }
