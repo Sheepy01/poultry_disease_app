@@ -1,16 +1,14 @@
-class CatalogueItem {
-  final String diseaseId;
+import 'disease_model.dart';
 
-  final String diseaseName;
+class CatalogueItem {
+  final DiseaseModel disease;
 
   final String imageName;
 
   final String finding;
 
   CatalogueItem({
-    required this.diseaseId,
-
-    required this.diseaseName,
+    required this.disease,
 
     required this.imageName,
 

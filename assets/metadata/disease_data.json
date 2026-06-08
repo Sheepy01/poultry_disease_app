@@ -1,185 +1,175 @@
 {
-  "newcastle_disease": {
-
-    "display_name": "Newcastle Disease",
-
-    "overview":
-      "Newcastle disease is a highly contagious viral disease affecting poultry birds. It spreads rapidly and may cause severe mortality.",
-
-    "mortality":
-      "Very High (>90%)",
-
-    "symptoms": [
-
-      "Twisted neck",
-
-      "Green-white diarrhea",
-
-      "Facial swelling",
-
-      "Paralysis of legs or wings",
-
-      "Respiratory distress",
-
-      "Drooping wings",
-
-      "Open-mouth breathing",
-
-      "Bluish comb"
-
-    ],
-
-    "treatment":
-      "No specific treatment is available for Newcastle disease.",
-
-    "immediate_actions": [
-
-      "Isolate infected birds",
-
-      "Disinfect the farm",
-
-      "Consult veterinarian immediately",
-
-      "Restrict visitor access",
-
-      "Safely dispose dead birds"
-
-    ],
-
-    "differential_diagnosis": [
-
-      "Infectious Bronchitis",
-
-      "Fowl Cholera",
-
-      "Mycoplasmosis",
-
-      "Infectious Coryza"
-
-    ],
-
-    "images": {
-
-      "newcastle_1.jpg": {
-        "finding":
-          "Green-white mucous diarrhea observed."
-      },
-
-      "newcastle_2.jpg": {
-        "finding":
-          "Facial swelling observed."
-      },
-
-      "newcastle_3.jpg": {
-        "finding":
-          "Twisted neck symptom observed."
-      },
-
-      "newcastle_4.jpg": {
-        "finding":
-          "Paralysis symptom observed."
-      },
-
-      "newcastle_5.jpg": {
-        "finding":
-          "Drooping wings observed."
-      },
-
-      "newcastle_6.jpg": {
-        "finding":
-          "Bluish comb symptom observed."
-      }
-
+    "newcastle_disease": {
+        "display_name": "Newcastle Disease",
+        "overview": "Newcastle disease is a highly contagious viral disease affecting poultry birds. It spreads rapidly and may cause severe mortality.",
+        "mortality": "Very High (>90%)",
+        "symptoms": [
+            "Twisted neck",
+            "Green-white diarrhea",
+            "Facial swelling",
+            "Paralysis of legs or wings",
+            "Respiratory distress",
+            "Drooping wings",
+            "Open-mouth breathing",
+            "Bluish comb",
+            "Depression",
+            "Foamy nasal discharge",
+            "Coughing",
+            "Sneezing",
+            "Reduced feed intake",
+            "Sudden drop in egg production",
+            "Thin-shelled eggs"
+        ],
+        "treatment": "No specific treatment is available for Newcastle disease.",
+        "immediate_actions": [
+            "Isolate infected birds",
+            "Disinfect the farm",
+            "Consult veterinarian immediately",
+            "Restrict visitor access",
+            "Safely dispose dead birds"
+        ],
+        "differential_diagnosis": [
+            "Infectious Bronchitis",
+            "Fowl Cholera",
+            "Mycoplasmosis",
+            "Infectious Coryza"
+        ],
+        "images": {
+            "newcastle_1.jpg": {
+                "finding": "Green-white mucous diarrhea observed."
+            },
+            "newcastle_2.jpg": {
+                "finding": "Facial swelling observed."
+            },
+            "newcastle_3.jpg": {
+                "finding": "Twisted neck (torticollis) observed."
+            },
+            "newcastle_4.jpg": {
+                "finding": "Paralysis of legs observed."
+            },
+            "newcastle_5.jpg": {
+                "finding": "Drooping wing observed."
+            },
+            "newcastle_6.jpg": {
+                "finding": "Head turned backward (opisthotonos) observed."
+            },
+            "newcastle_7.jpg": {
+                "finding": "Swollen comb with necrotic tissue."
+            },
+            "newcastle_8.jpg": {
+                "finding": "Bluish discolored comb with necrotic tissue."
+            },
+            "newcastle_9.jpg": {
+                "finding": "Pinpoint hemorrhages in the proventriculus."
+            },
+            "newcastle_10.jpg": {
+                "finding": "Pinpoint hemorrhages in the proventriculus."
+            },
+            "newcastle_11.jpg": {
+                "finding": "Severe congestion and inflammation of the trachea."
+            },
+            "newcastle_12.jpg": {
+                "finding": "Pinpoint hemorrhages in the small intestine."
+            },
+            "newcastle_13.jpg": {
+                "finding": "Pinpoint hemorrhages in the small intestine."
+            },
+            "newcastle_14.jpg": {
+                "finding": "Very high flock mortality (>90%)."
+            },
+            "newcastle_15.jpg": {
+                "finding": "Pinpoint hemorrhages in the small intestine."
+            },
+            "newcastle_16.jpg": {
+                "finding": "Pinpoint hemorrhages in the small intestine."
+            }
+        }
+    },
+    "aflatoxicosis": {
+        "display_name": "Aflatoxicosis",
+        "overview": "A toxin-related disease caused by aflatoxin-contaminated feed. It primarily damages the liver and can result in poor growth, weakness, and significant mortality in poultry.",
+        "mortality": "Moderate to High depending on toxin exposure",
+        "symptoms": [
+            "Weakness",
+            "Poor growth",
+            "Unthriftiness",
+            "High morbidity",
+            "High mortality",
+            "Depression",
+            "Reduced feed efficiency"
+        ],
+        "treatment": "No specific treatment is available. Remove contaminated feed and provide supportive care.",
+        "immediate_actions": [
+            "Remove contaminated feed immediately",
+            "Provide clean uncontaminated feed",
+            "Supplement Vitamin E",
+            "Supplement Vitamin C",
+            "Supplement Selenium",
+            "Treat secondary infections",
+            "Improve farm management",
+            "Provide activated charcoal if recommended"
+        ],
+        "differential_diagnosis": [
+            "Fatty Liver Syndrome",
+            "Hepatitis",
+            "Feed Toxicity",
+            "Nutritional Deficiencies"
+        ],
+        "images": {
+            "aflatoxicosis_1.png": {
+                "finding": "Bird lying on abdomen with legs extended backward."
+            },
+            "aflatoxicosis_2.png": {
+                "finding": "Liver enlargement and discoloration observed."
+            },
+            "aflatoxicosis_3.png": {
+                "finding": "Yellow fatty liver due to lipid accumulation."
+            },
+            "aflatoxicosis_4.png": {
+                "finding": "Congested liver with reddish discoloration."
+            },
+            "aflatoxicosis_5.png": {
+                "finding": "Multiple hemorrhagic lesions in the liver."
+            },
+            "aflatoxicosis_6.png": {
+                "finding": "Diffuse liver congestion associated with aflatoxin toxicity."
+            },
+            "aflatoxicosis_7.png": {
+                "finding": "Enlarged pale-yellow liver indicative of fatty degeneration."
+            },
+            "aflatoxicosis_8.png": {
+                "finding": "Severe hepatic damage caused by aflatoxin exposure."
+            },
+            "aflatoxicosis_9.png": {
+                "finding": "Liver showing chronic aflatoxicosis changes."
+            },
+            "aflatoxicosis_10.png": {
+                "finding": "Yellow to gray liver discoloration."
+            },
+            "aflatoxicosis_11.png": {
+                "finding": "Atrophied liver associated with chronic aflatoxicosis."
+            },
+            "aflatoxicosis_12.png": {
+                "finding": "Hemorrhagic lesions observed in liver tissue."
+            },
+            "aflatoxicosis_13.png": {
+                "finding": "Muscular hemorrhages associated with aflatoxin poisoning."
+            },
+            "aflatoxicosis_14.png": {
+                "finding": "Extensive liver degeneration and fatty infiltration."
+            },
+            "aflatoxicosis_15.png": {
+                "finding": "Chronic liver damage due to prolonged aflatoxin exposure."
+            },
+            "aflatoxicosis_16.png": {
+                "finding": "Severe hepatic pathology consistent with aflatoxicosis."
+            },
+            "aflatoxicosis_17.png": {
+                "finding": "Advanced liver lesions with discoloration and degeneration."
+            },
+            "aflatoxicosis_18.png": {
+                "finding": "Gross pathological changes characteristic of aflatoxicosis."
+            }
+        }
     }
-
-  },
-  "aflatoxicosis": {
-
-    "display_name": "Aflatoxicosis",
-
-    "overview":
-      "A toxin-related disease caused by aflatoxin-contaminated feed. It primarily damages the liver and can result in poor growth, weakness, and significant mortality in poultry.",
-
-    "mortality":
-      "Moderate to High depending on toxin exposure",
-
-    "symptoms": [
-
-      "Weakness",
-
-      "Poor growth",
-
-      "Unthriftiness",
-
-      "High morbidity",
-
-      "High mortality",
-
-      "Depression",
-
-      "Reduced feed efficiency"
-
-    ],
-
-    "treatment":
-      "No specific treatment is available. Remove contaminated feed and provide supportive care.",
-
-    "immediate_actions": [
-
-      "Remove contaminated feed immediately",
-
-      "Provide clean uncontaminated feed",
-
-      "Supplement Vitamin E",
-
-      "Supplement Vitamin C",
-
-      "Supplement Selenium",
-
-      "Treat secondary infections",
-
-      "Improve farm management",
-
-      "Provide activated charcoal if recommended"
-
-    ],
-
-    "differential_diagnosis": [
-
-      "Fatty Liver Syndrome",
-
-      "Hepatitis",
-
-      "Feed Toxicity",
-
-      "Nutritional Deficiencies"
-
-    ],
-
-    "images": {
-
-      "aflatoxicosis_1.png": {
-        "finding": "Bird lying on abdomen with legs extended backward."
-      },
-
-      "aflatoxicosis_2.png": {
-        "finding": "Liver enlargement and discoloration observed."
-      },
-
-      "aflatoxicosis_3.png": {
-        "finding": "Yellow fatty liver appearance observed."
-      },
-
-      "aflatoxicosis_4.png": {
-        "finding": "Liver congestion observed."
-      },
-
-      "aflatoxicosis_5.png": {
-        "finding": "Hemorrhagic lesions observed."
-      }
-
-    }
-
-  }
-
 }

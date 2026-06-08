@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/catalogue_item.dart';
 import '../services/catalogue_service.dart';
+import 'disease_detail_screen.dart';
 
 class DiseaseCatalogueScreen extends StatefulWidget {
   const DiseaseCatalogueScreen({super.key});
@@ -24,7 +25,6 @@ class _DiseaseCatalogueScreenState extends State<DiseaseCatalogueScreen> {
   @override
   void initState() {
     super.initState();
-
     loadCatalogue();
   }
 
@@ -48,10 +48,16 @@ class _DiseaseCatalogueScreenState extends State<DiseaseCatalogueScreen> {
 
   void filterItems(String query) {
     setState(() {
-      filteredItems = items.where((item) {
-        final search = query.toLowerCase();
+      if (query.trim().isEmpty) {
+        filteredItems = List.from(items);
 
-        return item.diseaseName.toLowerCase().contains(search) ||
+        return;
+      }
+
+      final search = query.toLowerCase();
+
+      filteredItems = items.where((item) {
+        return item.disease.displayName.toLowerCase().contains(search) ||
             item.finding.toLowerCase().contains(search);
       }).toList();
     });
@@ -78,7 +84,7 @@ class _DiseaseCatalogueScreenState extends State<DiseaseCatalogueScreen> {
                 style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
               ),
 
-              const SizedBox(height: 10),
+              const SizedBox(height: 8),
 
               Text(
                 "Browse poultry disease images and findings.",
@@ -86,7 +92,7 @@ class _DiseaseCatalogueScreenState extends State<DiseaseCatalogueScreen> {
                 style: TextStyle(color: Colors.grey.shade700, fontSize: 16),
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 20),
 
               TextField(
                 controller: searchController,
@@ -110,7 +116,7 @@ class _DiseaseCatalogueScreenState extends State<DiseaseCatalogueScreen> {
                 ),
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 20),
 
               if (isLoading)
                 const Expanded(
@@ -136,73 +142,106 @@ class _DiseaseCatalogueScreenState extends State<DiseaseCatalogueScreen> {
                       final item = filteredItems[index];
 
                       final imagePath =
-                          "assets/dataset/${item.diseaseId}/${item.imageName}";
+                          "assets/dataset/${item.disease.diseaseId}/${item.imageName}";
 
-                      return Card(
-                        elevation: 4,
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
 
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(24),
-                        ),
+                            MaterialPageRoute(
+                              builder: (_) => DiseaseDetailScreen(
+                                disease: item.disease,
 
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-
-                          children: [
-                            Expanded(
-                              child: ClipRRect(
-                                borderRadius: const BorderRadius.vertical(
-                                  top: Radius.circular(24),
-                                ),
-
-                                child: Image.asset(
-                                  imagePath,
-
-                                  width: double.infinity,
-
-                                  fit: BoxFit.cover,
-                                ),
+                                selectedImage: item.imageName,
                               ),
                             ),
+                          );
+                        },
 
-                            Padding(
-                              padding: const EdgeInsets.all(10),
+                        child: Card(
+                          elevation: 4,
 
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                          shadowColor: Colors.black12,
 
-                                children: [
-                                  Text(
-                                    item.diseaseName,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(24),
+                          ),
 
-                                    maxLines: 1,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
 
-                                    overflow: TextOverflow.ellipsis,
-
-                                    style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                            children: [
+                              Expanded(
+                                child: ClipRRect(
+                                  borderRadius: const BorderRadius.vertical(
+                                    top: Radius.circular(24),
                                   ),
 
-                                  const SizedBox(height: 6),
+                                  child: Image.asset(
+                                    imagePath,
 
-                                  Text(
-                                    item.finding,
+                                    width: double.infinity,
 
-                                    maxLines: 2,
+                                    fit: BoxFit.cover,
 
-                                    overflow: TextOverflow.ellipsis,
+                                    errorBuilder: (context, error, stackTrace) {
+                                      return Container(
+                                        color: Colors.grey.shade200,
 
-                                    style: TextStyle(
-                                      fontSize: 12,
-
-                                      color: Colors.grey.shade700,
-                                    ),
+                                        child: const Center(
+                                          child: Icon(
+                                            Icons.broken_image,
+                                            size: 40,
+                                          ),
+                                        ),
+                                      );
+                                    },
                                   ),
-                                ],
+                                ),
                               ),
-                            ),
-                          ],
+
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+
+                                  children: [
+                                    Text(
+                                      item.disease.displayName,
+
+                                      maxLines: 1,
+
+                                      overflow: TextOverflow.ellipsis,
+
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+
+                                        fontSize: 14,
+                                      ),
+                                    ),
+
+                                    const SizedBox(height: 6),
+
+                                    Text(
+                                      item.finding,
+
+                                      maxLines: 2,
+
+                                      overflow: TextOverflow.ellipsis,
+
+                                      style: TextStyle(
+                                        fontSize: 12,
+
+                                        color: Colors.grey.shade700,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       );
                     },

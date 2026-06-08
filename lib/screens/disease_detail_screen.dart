@@ -5,13 +5,17 @@ import '../models/disease_model.dart';
 class DiseaseDetailScreen extends StatelessWidget {
   final DiseaseModel disease;
 
-  const DiseaseDetailScreen({super.key, required this.disease});
+  final String selectedImage;
+
+  const DiseaseDetailScreen({
+    super.key,
+    required this.disease,
+    required this.selectedImage,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final firstImage = disease.images.keys.first;
-
-    final imagePath = "assets/dataset/${disease.diseaseId}/$firstImage";
+    final imagePath = "assets/dataset/${disease.diseaseId}/$selectedImage";
 
     return Scaffold(
       backgroundColor: const Color(0xFFF4F7FB),
@@ -111,18 +115,17 @@ class DiseaseDetailScreen extends StatelessWidget {
 
             const SizedBox(height: 30),
 
-            _sectionTitle("Mortality"),
+            // _sectionTitle("Mortality"),
 
-            const SizedBox(height: 10),
+            // const SizedBox(height: 10),
 
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(18),
+            // Card(
+            //   child: Padding(
+            //     padding: const EdgeInsets.all(18),
 
-                child: Text(disease.mortality),
-              ),
-            ),
-
+            //     child: Text(disease.mortality),
+            //   ),
+            // ),
             if (disease.treatment != null) ...[
               const SizedBox(height: 30),
 

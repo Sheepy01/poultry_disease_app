@@ -15,12 +15,8 @@ class CatalogueService {
       disease.images.forEach((imageName, imageData) {
         items.add(
           CatalogueItem(
-            diseaseId: disease.diseaseId,
-
-            diseaseName: disease.displayName,
-
+            disease: disease,
             imageName: imageName,
-
             finding: imageData["finding"] ?? "No finding available",
           ),
         );

@@ -290,28 +290,27 @@ class ResultScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              _sectionTitle("Mortality"),
+              // _sectionTitle("Mortality"),
 
-              const SizedBox(height: 15),
+              // const SizedBox(height: 15),
 
-              _infoCard(
-                icon: Icons.monitor_heart,
+              // _infoCard(
+              //   icon: Icons.monitor_heart,
 
-                color: Colors.deepPurple,
+              //   color: Colors.deepPurple,
 
-                child: Text(
-                  disease['mortality'] ?? "Unknown",
+              //   child: Text(
+              //     disease['mortality'] ?? "Unknown",
 
-                  style: const TextStyle(
-                    fontSize: 18,
+              //     style: const TextStyle(
+              //       fontSize: 18,
 
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+              //       fontWeight: FontWeight.bold,
+              //     ),
+              //   ),
+              // ),
 
-              const SizedBox(height: 35),
-
+              // const SizedBox(height: 35),
               SizedBox(
                 width: double.infinity,
 
