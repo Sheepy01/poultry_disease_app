@@ -120,7 +120,7 @@ class ResultScreen extends StatelessWidget {
                     const SizedBox(height: 10),
 
                     Text(
-                      disease['display_name'] ?? "Unknown Disease",
+                      disease['display_name']['hi'] ?? "Unknown Disease",
 
                       style: const TextStyle(
                         color: Colors.white,
