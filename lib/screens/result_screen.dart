@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../services/pdf_service.dart';
 import '../utils/app_config.dart';
+import '../utils/app_strings.dart';
 
 class ResultScreen extends StatelessWidget {
   final File image;
@@ -67,8 +68,8 @@ class ResultScreen extends StatelessWidget {
 
                   const SizedBox(width: 10),
 
-                  const Text(
-                    "Detection Result",
+                  Text(
+                    AppStrings.strings["detection_result"]!,
 
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
@@ -114,8 +115,8 @@ class ResultScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
 
                   children: [
-                    const Text(
-                      "Detected Disease",
+                    Text(
+                      AppStrings.strings["detected_disease"]!,
 
                       style: TextStyle(color: Colors.white70, fontSize: 16),
                     ),
@@ -125,7 +126,7 @@ class ResultScreen extends StatelessWidget {
                     Text(
                       AppConfig.text(
                         disease['display_name'],
-                        fallback: "Unknown Disease",
+                        fallback: AppStrings.strings["unknown_disease"]!,
                       ),
 
                       style: const TextStyle(
@@ -139,8 +140,8 @@ class ResultScreen extends StatelessWidget {
 
                     const SizedBox(height: 8),
 
-                    const Text(
-                      "AI Analysis Complete",
+                    Text(
+                      AppStrings.strings["ai_analysis_complete"]!,
 
                       style: TextStyle(color: Colors.white70, fontSize: 16),
                     ),
@@ -159,44 +160,7 @@ class ResultScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                       ),
 
-                      child: Column(
-                        // children: [
-
-                        //   const Text(
-
-                        //     "Confidence",
-
-                        //     style: TextStyle(
-                        //       color:
-                        //       Colors.black54,
-                        //     ),
-
-                        //   ),
-
-                        //   const SizedBox(
-                        //     height: 5,
-                        //   ),
-
-                        //   Text(
-
-                        //     "${result['confidence']}%",
-
-                        //     style: TextStyle(
-
-                        //       color:
-                        //       getConfidenceColor(),
-
-                        //       fontWeight:
-                        //       FontWeight.bold,
-
-                        //       fontSize: 24,
-
-                        //     ),
-
-                        //   ),
-
-                        // ],
-                      ),
+                      child: const Column(),
                     ),
 
                     const SizedBox(height: 20),
@@ -204,7 +168,7 @@ class ResultScreen extends StatelessWidget {
                     Text(
                       AppConfig.text(
                         disease['overview'],
-                        fallback: "No overview available.",
+                        fallback: AppStrings.strings["no_overview_available"]!,
                       ),
 
                       style: const TextStyle(
@@ -221,7 +185,7 @@ class ResultScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              _sectionTitle("Detected Finding"),
+              _sectionTitle(AppStrings.strings["detected_finding"]!),
 
               const SizedBox(height: 15),
 
@@ -233,7 +197,7 @@ class ResultScreen extends StatelessWidget {
                 child: Text(
                   AppConfig.text(
                     matchedFinding,
-                    fallback: "No finding available.",
+                    fallback: AppStrings.strings["no_finding_available"]!,
                   ),
 
                   style: const TextStyle(fontSize: 16, height: 1.5),
@@ -242,7 +206,7 @@ class ResultScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              _sectionTitle("Clinical Symptoms"),
+              _sectionTitle(AppStrings.strings["clinical_symptoms"]!),
 
               const SizedBox(height: 15),
 
@@ -277,7 +241,7 @@ class ResultScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              _sectionTitle("Immediate Actions"),
+              _sectionTitle(AppStrings.strings["immediate_actions"]!),
 
               const SizedBox(height: 15),
 
@@ -301,34 +265,13 @@ class ResultScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              // _sectionTitle("Mortality"),
-
-              // const SizedBox(height: 15),
-
-              // _infoCard(
-              //   icon: Icons.monitor_heart,
-
-              //   color: Colors.deepPurple,
-
-              //   child: Text(
-              //     AppConfig.text(disease['mortality'], fallback: "Unknown"),
-
-              //     style: const TextStyle(
-              //       fontSize: 18,
-
-              //       fontWeight: FontWeight.bold,
-              //     ),
-              //   ),
-              // ),
-
-              // const SizedBox(height: 35),
               SizedBox(
                 width: double.infinity,
 
                 child: ElevatedButton.icon(
                   icon: const Icon(Icons.picture_as_pdf),
 
-                  label: const Text("Export PDF Report"),
+                  label: Text(AppStrings.strings["export_pdf_report"]!),
 
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(vertical: 16),
@@ -340,7 +283,11 @@ class ResultScreen extends StatelessWidget {
 
                   onPressed: () async {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text("Generating PDF report...")),
+                      SnackBar(
+                        content: Text(
+                          AppStrings.strings["generating_pdf_report"]!,
+                        ),
+                      ),
                     );
 
                     await pdfService.generateReport(

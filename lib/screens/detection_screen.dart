@@ -5,21 +5,19 @@ import 'package:image_picker/image_picker.dart';
 
 import '../services/similarity_service.dart';
 import '../services/tflite_service.dart';
+import '../utils/app_strings.dart';
 import 'result_screen.dart';
 
 import '../services/metadata_service.dart';
 
 class DetectionScreen extends StatefulWidget {
-
   const DetectionScreen({super.key});
 
   @override
   State<DetectionScreen> createState() => _DetectionScreenState();
-
 }
 
 class _DetectionScreenState extends State<DetectionScreen> {
-
   File? selectedImage;
 
   String prediction = "";
@@ -33,126 +31,84 @@ class _DetectionScreenState extends State<DetectionScreen> {
 
   @override
   void initState() {
-
     super.initState();
 
     loadModel();
-
   }
 
   Future<void> loadModel() async {
-
     await tfliteService.loadModel();
-
   }
 
   Future<void> pickImage() async {
-
     final picker = ImagePicker();
 
-    final pickedFile = await picker.pickImage(
-      source: ImageSource.gallery,
-    );
+    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
 
     if (pickedFile != null) {
-
       setState(() {
-
         selectedImage = File(pickedFile.path);
 
         prediction = "";
-
       });
 
       await detectDisease();
-
     }
-
   }
 
   Future<void> detectDisease() async {
-
     if (selectedImage == null) return;
 
     setState(() {
       isLoading = true;
     });
-    await Future.delayed(
-      const Duration(milliseconds: 2000),
-    );
+    await Future.delayed(const Duration(milliseconds: 2000));
 
     try {
-
-      List<double> embedding =
-      await tfliteService.extractEmbedding(
+      List<double> embedding = await tfliteService.extractEmbedding(
         selectedImage!,
       );
 
-      final result =
-      await similarityService.findBestMatch(
-        embedding,
-      );
+      final result = await similarityService.findBestMatch(embedding);
 
-      final diseaseData =
-        await metadataService.loadDiseaseData();
+      final diseaseData = await metadataService.loadDiseaseData();
 
-        Navigator.push(
+      Navigator.push(
+        context,
 
-          context,
+        MaterialPageRoute(
+          builder: (_) => ResultScreen(
+            image: selectedImage!,
 
-          MaterialPageRoute(
+            result: result,
 
-            builder: (_) => ResultScreen(
-
-              image: selectedImage!,
-
-              result: result,
-
-              diseaseData: diseaseData,
-
-            ),
-
+            diseaseData: diseaseData,
           ),
-
-        );
-
+        ),
+      );
     } catch (e) {
-
       setState(() {
-
-        prediction = "Unable to analyze image.";
-
+        prediction = AppStrings.strings["unable_to_analyze_image"]!;
       });
-
     }
 
     setState(() {
       isLoading = false;
     });
-
   }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-
-      appBar: AppBar(
-        title: const Text("Disease Detection"),
-      ),
+      appBar: AppBar(title: Text(AppStrings.strings["detect_disease"]!)),
 
       body: Padding(
-
         padding: const EdgeInsets.all(20),
 
         child: Column(
-
           children: [
-
             Expanded(
-
               child: Container(
-
                 width: double.infinity,
 
                 decoration: BoxDecoration(
@@ -161,110 +117,79 @@ class _DetectionScreenState extends State<DetectionScreen> {
                 ),
 
                 child: selectedImage == null
-                  ? Center(
+                    ? Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
 
-                child: Column(
+                          children: [
+                            Icon(
+                              Icons.document_scanner,
+                              size: 80,
+                              color: Colors.teal.shade300,
+                            ),
 
-                  mainAxisAlignment:
-                  MainAxisAlignment.center,
+                            const SizedBox(height: 20),
 
-                  children: [
+                            Text(
+                              AppStrings.strings["upload_poultry_image"]!,
+                              style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
 
-                    Icon(
-                      Icons.document_scanner,
-                      size: 80,
-                      color: Colors.teal.shade300,
-                    ),
+                            const SizedBox(height: 10),
 
-                    const SizedBox(height: 20),
-
-                    const Text(
-                      "Upload Poultry Image",
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-
-                    const SizedBox(height: 10),
-
-                    Text(
-                      "AI will analyze disease patterns",
-                      style: TextStyle(
-                        color: Colors.grey.shade600,
-                      ),
-                    ),
-
-                  ],
-
-                ),
-
-              )
+                            Text(
+                              AppStrings.strings["ai_analyze_patterns"]!,
+                              style: TextStyle(color: Colors.grey.shade600),
+                            ),
+                          ],
+                        ),
+                      )
                     : ClipRRect(
-                  borderRadius: BorderRadius.circular(24),
-                  child: Image.file(
-                    selectedImage!,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-
+                        borderRadius: BorderRadius.circular(24),
+                        child: Image.file(selectedImage!, fit: BoxFit.cover),
+                      ),
               ),
-
             ),
 
             const SizedBox(height: 20),
 
             if (isLoading)
-
               Container(
-
-                margin: const EdgeInsets.only(
-                  bottom: 20,
-                ),
+                margin: const EdgeInsets.only(bottom: 20),
 
                 padding: const EdgeInsets.all(20),
 
                 decoration: BoxDecoration(
-
                   color: Colors.white,
 
-                  borderRadius:
-                  BorderRadius.circular(24),
+                  borderRadius: BorderRadius.circular(24),
 
                   boxShadow: [
-
                     BoxShadow(
-                      color:
-                      Colors.black.withOpacity(0.05),
+                      color: Colors.black.withOpacity(0.05),
                       blurRadius: 10,
                       offset: const Offset(0, 5),
                     ),
-
                   ],
-
                 ),
 
                 child: Column(
-
                   children: [
-
                     SizedBox(
-
                       height: 80,
                       width: 80,
 
                       child: Stack(
-
                         alignment: Alignment.center,
 
                         children: [
-
                           CircularProgressIndicator(
-
                             strokeWidth: 6,
 
                             color: Colors.teal.shade400,
-
                           ),
 
                           Icon(
@@ -272,34 +197,26 @@ class _DetectionScreenState extends State<DetectionScreen> {
                             color: Colors.teal.shade400,
                             size: 35,
                           ),
-
                         ],
-
                       ),
-
                     ),
 
                     const SizedBox(height: 20),
 
-                    const Text(
-
-                      "AI Scanning in Progress",
+                    Text(
+                      AppStrings.strings["ai_scanning_in_progress"]!,
 
                       style: TextStyle(
-
                         fontSize: 20,
 
                         fontWeight: FontWeight.bold,
-
                       ),
-
                     ),
 
                     const SizedBox(height: 10),
 
                     Text(
-
-                      "Analyzing poultry disease patterns...",
+                      AppStrings.strings["analyzing_poultry_patterns"]!,
 
                       textAlign: TextAlign.center,
 
@@ -307,22 +224,14 @@ class _DetectionScreenState extends State<DetectionScreen> {
                         color: Colors.grey.shade700,
                         height: 1.5,
                       ),
-
                     ),
-
                   ],
-
                 ),
-
               ),
 
             if (prediction.isNotEmpty)
-
               Padding(
-
-                padding: const EdgeInsets.symmetric(
-                  vertical: 20,
-                ),
+                padding: const EdgeInsets.symmetric(vertical: 20),
 
                 child: Text(
                   prediction,
@@ -332,31 +241,20 @@ class _DetectionScreenState extends State<DetectionScreen> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-
               ),
 
             SizedBox(
-
               width: double.infinity,
 
               child: ElevatedButton(
-
                 onPressed: pickImage,
 
-                child: const Text("Upload Chicken Image"),
-
+                child: Text(AppStrings.strings["upload_chicken_image"]!),
               ),
-
             ),
-
           ],
-
         ),
-
       ),
-
     );
-
   }
-
 }

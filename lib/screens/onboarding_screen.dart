@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../utils/app_strings.dart';
 import 'main_navigation.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -42,32 +43,32 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     });
                   },
 
-                  children: const [
+                  children: [
                     OnboardPage(
                       image: 'assets/images/onboard_ai.png',
 
-                      title: 'AI-powered Detection',
+                      title: AppStrings.strings["onboarding_ai_title"]!,
 
                       description:
-                          'Analyze poultry disease patterns using offline AI image similarity analysis.',
+                          AppStrings.strings["onboarding_ai_description"]!,
                     ),
 
                     OnboardPage(
                       image: 'assets/images/onboard_scan.png',
 
-                      title: 'Smart Disease Analysis',
+                      title: AppStrings.strings["onboarding_scan_title"]!,
 
                       description:
-                          'Detect poultry diseases from uploaded images with explainable AI insights.',
+                          AppStrings.strings["onboarding_scan_description"]!,
                     ),
 
                     OnboardPage(
                       image: 'assets/images/onboard_report.png',
 
-                      title: 'Generate Reports',
+                      title: AppStrings.strings["onboarding_report_title"]!,
 
                       description:
-                          'Export disease findings and recommendations as professional PDF reports.',
+                          AppStrings.strings["onboarding_report_description"]!,
                     ),
                   ],
                 ),
@@ -88,7 +89,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         controller.jumpToPage(2);
                       },
 
-                      child: const Text("Skip"),
+                      child: Text(AppStrings.strings["skip"]!),
                     ),
 
                     SmoothPageIndicator(
@@ -123,7 +124,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         }
                       },
 
-                      child: Text(isLastPage ? "Start" : "Next"),
+                      child: Text(
+                        isLastPage
+                            ? AppStrings.strings["start"]!
+                            : AppStrings.strings["next"]!,
+                      ),
                     ),
                   ],
                 ),

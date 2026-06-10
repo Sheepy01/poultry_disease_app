@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/disease_model.dart';
 import '../utils/app_config.dart';
+import '../utils/app_strings.dart';
 
 class DiseaseDetailScreen extends StatelessWidget {
   final DiseaseModel disease;
@@ -94,7 +95,7 @@ class DiseaseDetailScreen extends StatelessWidget {
 
             const SizedBox(height: 25),
 
-            _sectionTitle("Symptoms"),
+            _sectionTitle(AppStrings.strings["symptoms"]!),
 
             const SizedBox(height: 15),
 
@@ -116,21 +117,10 @@ class DiseaseDetailScreen extends StatelessWidget {
 
             const SizedBox(height: 30),
 
-            // _sectionTitle("Mortality"),
-
-            // const SizedBox(height: 10),
-
-            // Card(
-            //   child: Padding(
-            //     padding: const EdgeInsets.all(18),
-
-            //     child: Text(disease.mortality[AppConfig.language] ?? ""),
-            //   ),
-            // ),
             if (AppConfig.text(disease.treatment).isNotEmpty) ...[
               const SizedBox(height: 30),
 
-              _sectionTitle("Treatment"),
+              _sectionTitle(AppStrings.strings["treatment"]!),
 
               const SizedBox(height: 10),
 
@@ -145,7 +135,7 @@ class DiseaseDetailScreen extends StatelessWidget {
 
             const SizedBox(height: 30),
 
-            _sectionTitle("Immediate Actions"),
+            _sectionTitle(AppStrings.strings["immediate_actions"]!),
 
             const SizedBox(height: 10),
 
@@ -162,7 +152,7 @@ class DiseaseDetailScreen extends StatelessWidget {
             if (disease.differentialDiagnosis.isNotEmpty) ...[
               const SizedBox(height: 30),
 
-              _sectionTitle("Differential Diagnosis"),
+              _sectionTitle(AppStrings.strings["differential_diagnosis"]!),
 
               const SizedBox(height: 10),
 
@@ -181,7 +171,7 @@ class DiseaseDetailScreen extends StatelessWidget {
 
             const SizedBox(height: 30),
 
-            _sectionTitle("Reference Images"),
+            _sectionTitle(AppStrings.strings["reference_images"]!),
 
             const SizedBox(height: 15),
 

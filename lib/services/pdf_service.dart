@@ -8,6 +8,7 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 
 import '../utils/app_config.dart';
+import '../utils/app_strings.dart';
 
 class PdfService {
   const PdfService();
@@ -49,7 +50,7 @@ class PdfService {
           build: (context) => [
             pw.Center(
               child: pw.Text(
-                'Poultry AI Disease Report',
+                AppStrings.strings["pdf_report_title"]!,
 
                 style: pw.TextStyle(
                   fontSize: 28,
@@ -81,12 +82,15 @@ class PdfService {
 
             pw.SizedBox(height: 30),
 
-            _sectionTitle('Detected Disease'),
+            _sectionTitle(AppStrings.strings["detected_disease"]!),
 
             pw.SizedBox(height: 10),
 
             pw.Text(
-              AppConfig.text(disease, fallback: "Unknown Disease"),
+              AppConfig.text(
+                disease,
+                fallback: AppStrings.strings["unknown_disease"]!,
+              ),
 
               style: pw.TextStyle(
                 fontSize: 22,
@@ -99,7 +103,7 @@ class PdfService {
 
             pw.SizedBox(height: 25),
 
-            _sectionTitle('Confidence Score'),
+            _sectionTitle(AppStrings.strings["confidence_score"]!),
 
             pw.SizedBox(height: 10),
 
@@ -130,7 +134,7 @@ class PdfService {
 
             pw.SizedBox(height: 30),
 
-            _sectionTitle('Clinical Symptoms'),
+            _sectionTitle(AppStrings.strings["clinical_symptoms"]!),
 
             pw.SizedBox(height: 12),
 
@@ -158,7 +162,7 @@ class PdfService {
 
             pw.SizedBox(height: 30),
 
-            _sectionTitle('Immediate Actions'),
+            _sectionTitle(AppStrings.strings["immediate_actions"]!),
 
             pw.SizedBox(height: 12),
 
@@ -191,7 +195,7 @@ class PdfService {
             pw.SizedBox(height: 10),
 
             pw.Text(
-              'Generated On',
+              AppStrings.strings["generated_on"]!,
 
               style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 14),
             ),
@@ -204,7 +208,7 @@ class PdfService {
 
             pw.Center(
               child: pw.Text(
-                'AI-assisted Poultry Disease Detection System',
+                AppStrings.strings["pdf_footer"]!,
 
                 style: pw.TextStyle(fontSize: 12, color: PdfColors.grey600),
               ),
@@ -219,9 +223,9 @@ class PdfService {
         },
       );
 
-      print("PDF Generated Successfully");
+      print(AppStrings.strings["pdf_generated_successfully"]!);
     } catch (e) {
-      print("PDF Generation Error: $e");
+      print("${AppStrings.strings["pdf_generation_error"]!}: $e");
     }
   }
 

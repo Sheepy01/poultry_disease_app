@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/catalogue_item.dart';
 import '../services/catalogue_service.dart';
 import '../utils/app_config.dart';
+import '../utils/app_strings.dart';
 import 'disease_detail_screen.dart';
 
 class DiseaseCatalogueScreen extends StatefulWidget {
@@ -81,8 +82,8 @@ class _DiseaseCatalogueScreenState extends State<DiseaseCatalogueScreen> {
             children: [
               const SizedBox(height: 10),
 
-              const Text(
-                "Disease Catalogue",
+              Text(
+                AppStrings.strings["catalogue"]!,
 
                 style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
               ),
@@ -90,7 +91,7 @@ class _DiseaseCatalogueScreenState extends State<DiseaseCatalogueScreen> {
               const SizedBox(height: 8),
 
               Text(
-                "Browse poultry disease images and findings.",
+                AppStrings.strings["catalogue_subtitle"]!,
 
                 style: TextStyle(color: Colors.grey.shade700, fontSize: 16),
               ),
@@ -103,7 +104,7 @@ class _DiseaseCatalogueScreenState extends State<DiseaseCatalogueScreen> {
                 onChanged: filterItems,
 
                 decoration: InputDecoration(
-                  hintText: "Search disease or finding...",
+                  hintText: AppStrings.strings["search_disease_or_finding"]!,
 
                   prefixIcon: const Icon(Icons.search),
 
@@ -204,45 +205,45 @@ class _DiseaseCatalogueScreenState extends State<DiseaseCatalogueScreen> {
                                 ),
                               ),
 
-                              Padding(
-                                padding: const EdgeInsets.all(10),
+                              // Padding(
+                              //   padding: const EdgeInsets.all(10),
 
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                              //   child: Column(
+                              //     crossAxisAlignment: CrossAxisAlignment.start,
 
-                                  children: [
-                                    Text(
-                                      AppConfig.text(item.disease.displayName),
+                              //     children: [
+                              //       Text(
+                              //         AppConfig.text(item.disease.displayName),
 
-                                      maxLines: 1,
+                              //         maxLines: 1,
 
-                                      overflow: TextOverflow.ellipsis,
+                              //         overflow: TextOverflow.ellipsis,
 
-                                      style: const TextStyle(
-                                        fontWeight: FontWeight.bold,
+                              //         style: const TextStyle(
+                              //           fontWeight: FontWeight.bold,
 
-                                        fontSize: 14,
-                                      ),
-                                    ),
+                              //           fontSize: 14,
+                              //         ),
+                              //       ),
 
-                                    const SizedBox(height: 6),
+                              //       const SizedBox(height: 6),
 
-                                    Text(
-                                      AppConfig.text(item.finding),
+                              //       Text(
+                              //         AppConfig.text(item.finding),
 
-                                      maxLines: 2,
+                              //         maxLines: 2,
 
-                                      overflow: TextOverflow.ellipsis,
+                              //         overflow: TextOverflow.ellipsis,
 
-                                      style: TextStyle(
-                                        fontSize: 12,
+                              //         style: TextStyle(
+                              //           fontSize: 12,
 
-                                        color: Colors.grey.shade700,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                              //           color: Colors.grey.shade700,
+                              //         ),
+                              //       ),
+                              //     ],
+                              //   ),
+                              // ),
                             ],
                           ),
                         ),

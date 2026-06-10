@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/app_colors.dart';
+import '../utils/app_strings.dart';
 import 'detection_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,7 +21,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 10),
 
               Text(
-                "Poultry AI",
+                AppStrings.strings["app_brand"]!,
                 style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
@@ -29,7 +30,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 10),
 
               Text(
-                "AI-assisted Poultry Disease Detection & Awareness System",
+                AppStrings.strings["home_subtitle"]!,
                 style: TextStyle(color: Colors.grey.shade700, fontSize: 16),
               ),
 
@@ -60,52 +61,93 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
 
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-
+                child: Stack(
                   children: [
-                    const Icon(
-                      Icons.health_and_safety,
-                      color: Colors.white,
-                      size: 60,
-                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Icon(
+                          Icons.health_and_safety,
+                          color: Colors.white,
+                          size: 60,
+                        ),
 
-                    const SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
-                    const Text(
-                      "Smart Poultry Disease Analysis",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-
-                    const SizedBox(height: 12),
-
-                    const Text(
-                      "Detect poultry diseases using AI-powered image similarity analysis.",
-                      style: TextStyle(color: Colors.white70, fontSize: 16),
-                    ),
-
-                    const SizedBox(height: 24),
-
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        foregroundColor: AppColors.primary,
-                      ),
-
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => const DetectionScreen(),
+                        Text(
+                          AppStrings.strings["home_hero_title"]!,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
                           ),
-                        );
-                      },
+                        ),
 
-                      child: const Text("Start Detection"),
+                        const SizedBox(height: 12),
+
+                        Text(
+                          AppStrings.strings["home_hero_description"]!,
+                          style: TextStyle(color: Colors.white70, fontSize: 16),
+                        ),
+
+                        const SizedBox(height: 24),
+
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            foregroundColor: AppColors.primary,
+                          ),
+
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => const DetectionScreen(),
+                              ),
+                            );
+                          },
+
+                          child: Text(AppStrings.strings["start_detection"]!),
+                        ),
+                      ],
+                    ),
+                    Positioned(
+                      top: 0,
+                      right: 0,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 42,
+                            height: 42,
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.18),
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(
+                                color: Colors.white.withOpacity(0.35),
+                                width: 1,
+                              ),
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Image.asset(
+                                'assets/images/Meckarup Logo 2.png',
+                                width: 42,
+                                height: 42,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          const Text(
+                            'Developed by Meckarup',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -113,39 +155,39 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              const Text(
-                "Disease Awareness",
+              Text(
+                AppStrings.strings["disease_awareness"]!,
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
 
               const SizedBox(height: 20),
 
               _buildInfoCard(
-                title: "Newcastle Disease",
+                title: AppStrings.strings["newcastle_disease"]!,
                 icon: Icons.coronavirus,
                 color: Colors.red,
                 description:
-                    "Highly contagious viral disease causing respiratory and neurological symptoms in poultry.",
+                    AppStrings.strings["newcastle_awareness_description"]!,
               ),
 
               const SizedBox(height: 20),
 
               _buildInfoCard(
-                title: "Aflatoxicosis Disease",
+                title: AppStrings.strings["aflatoxicosis_disease"]!,
                 icon: Icons.biotech,
                 color: Colors.red,
                 description:
-                    "A toxin-related disease caused by aflatoxin-contaminated feed. It primarily damages the liver and can result in poor growth, weakness, and significant mortality in poultry.",
+                    AppStrings.strings["aflatoxicosis_awareness_description"]!,
               ),
 
               const SizedBox(height: 20),
 
               _buildInfoCard(
-                title: "AI-based Detection",
+                title: AppStrings.strings["ai_based_detection"]!,
                 icon: Icons.psychology,
                 color: Colors.teal,
                 description:
-                    "This app uses AI-powered image similarity analysis for poultry disease identification.",
+                    AppStrings.strings["ai_based_detection_description"]!,
               ),
             ],
           ),

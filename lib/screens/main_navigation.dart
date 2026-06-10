@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../utils/app_strings.dart';
 import 'home_screen.dart';
 import 'disease_catalogue_screen.dart';
 
@@ -64,21 +65,21 @@ class _MainNavigationState extends State<MainNavigation> {
               });
             },
 
-            destinations: const [
+            destinations: [
               NavigationDestination(
-                icon: Icon(Icons.home_outlined),
+                icon: const Icon(Icons.home_outlined),
 
-                selectedIcon: Icon(Icons.home),
+                selectedIcon: const Icon(Icons.home),
 
-                label: "Home",
+                label: AppStrings.strings["home"]!,
               ),
 
               NavigationDestination(
-                icon: Icon(Icons.menu_book_outlined),
+                icon: const Icon(Icons.menu_book_outlined),
 
-                selectedIcon: Icon(Icons.menu_book),
+                selectedIcon: const Icon(Icons.menu_book),
 
-                label: "Catalogue",
+                label: AppStrings.strings["catalogue"]!,
               ),
             ],
           ),
