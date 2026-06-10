@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/disease_model.dart';
+import '../utils/app_config.dart';
 
 class DiseaseDetailScreen extends StatelessWidget {
   final DiseaseModel disease;
@@ -25,7 +26,7 @@ class DiseaseDetailScreen extends StatelessWidget {
 
         backgroundColor: Colors.transparent,
 
-        title: Text(disease.displayName),
+        title: Text(AppConfig.text(disease.displayName)),
       ),
 
       body: SingleChildScrollView(
@@ -69,7 +70,7 @@ class DiseaseDetailScreen extends StatelessWidget {
 
                 children: [
                   Text(
-                    disease.displayName,
+                    AppConfig.text(disease.displayName),
 
                     style: const TextStyle(
                       color: Colors.white,
@@ -83,7 +84,7 @@ class DiseaseDetailScreen extends StatelessWidget {
                   const SizedBox(height: 15),
 
                   Text(
-                    disease.overview,
+                    AppConfig.text(disease.overview),
 
                     style: const TextStyle(color: Colors.white, height: 1.5),
                   ),
@@ -105,7 +106,7 @@ class DiseaseDetailScreen extends StatelessWidget {
               children: disease.symptoms
                   .map(
                     (symptom) => Chip(
-                      label: Text(symptom.toString()),
+                      label: Text(AppConfig.text(symptom)),
 
                       backgroundColor: Colors.teal.shade50,
                     ),
@@ -123,10 +124,10 @@ class DiseaseDetailScreen extends StatelessWidget {
             //   child: Padding(
             //     padding: const EdgeInsets.all(18),
 
-            //     child: Text(disease.mortality),
+            //     child: Text(disease.mortality[AppConfig.language] ?? ""),
             //   ),
             // ),
-            if (disease.treatment != null) ...[
+            if (AppConfig.text(disease.treatment).isNotEmpty) ...[
               const SizedBox(height: 30),
 
               _sectionTitle("Treatment"),
@@ -137,7 +138,7 @@ class DiseaseDetailScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(18),
 
-                  child: Text(disease.treatment!),
+                  child: Text(AppConfig.text(disease.treatment)),
                 ),
               ),
             ],
@@ -153,10 +154,30 @@ class DiseaseDetailScreen extends StatelessWidget {
                 child: ListTile(
                   leading: const Icon(Icons.warning, color: Colors.red),
 
-                  title: Text(action.toString()),
+                  title: Text(AppConfig.text(action)),
                 ),
               ),
             ),
+
+            if (disease.differentialDiagnosis.isNotEmpty) ...[
+              const SizedBox(height: 30),
+
+              _sectionTitle("Differential Diagnosis"),
+
+              const SizedBox(height: 10),
+
+              ...disease.differentialDiagnosis.map(
+                (diagnosis) => Card(
+                  child: ListTile(
+                    leading: const Icon(
+                      Icons.medical_information,
+                      color: Colors.teal,
+                    ),
+                    title: Text(AppConfig.text(diagnosis)),
+                  ),
+                ),
+              ),
+            ],
 
             const SizedBox(height: 30),
 

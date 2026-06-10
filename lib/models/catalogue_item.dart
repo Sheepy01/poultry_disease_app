@@ -5,7 +5,7 @@ class CatalogueItem {
 
   final String imageName;
 
-  final String finding;
+  final Map<String, dynamic> finding;
 
   CatalogueItem({
     required this.disease,

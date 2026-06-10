@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/catalogue_item.dart';
 import '../services/catalogue_service.dart';
+import '../utils/app_config.dart';
 import 'disease_detail_screen.dart';
 
 class DiseaseCatalogueScreen extends StatefulWidget {
@@ -57,8 +58,10 @@ class _DiseaseCatalogueScreenState extends State<DiseaseCatalogueScreen> {
       final search = query.toLowerCase();
 
       filteredItems = items.where((item) {
-        return item.disease.displayName.toLowerCase().contains(search) ||
-            item.finding.toLowerCase().contains(search);
+        return AppConfig.text(
+              item.disease.displayName,
+            ).toLowerCase().contains(search) ||
+            AppConfig.text(item.finding).toLowerCase().contains(search);
       }).toList();
     });
   }
@@ -201,45 +204,45 @@ class _DiseaseCatalogueScreenState extends State<DiseaseCatalogueScreen> {
                                 ),
                               ),
 
-                              // Padding(
-                              //   padding: const EdgeInsets.all(10),
+                              Padding(
+                                padding: const EdgeInsets.all(10),
 
-                              //   child: Column(
-                              //     crossAxisAlignment: CrossAxisAlignment.start,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
 
-                              //     children: [
-                              //       Text(
-                              //         item.disease.displayName,
+                                  children: [
+                                    Text(
+                                      AppConfig.text(item.disease.displayName),
 
-                              //         maxLines: 1,
+                                      maxLines: 1,
 
-                              //         overflow: TextOverflow.ellipsis,
+                                      overflow: TextOverflow.ellipsis,
 
-                              //         style: const TextStyle(
-                              //           fontWeight: FontWeight.bold,
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
 
-                              //           fontSize: 14,
-                              //         ),
-                              //       ),
+                                        fontSize: 14,
+                                      ),
+                                    ),
 
-                              //       const SizedBox(height: 6),
+                                    const SizedBox(height: 6),
 
-                              //       Text(
-                              //         item.finding,
+                                    Text(
+                                      AppConfig.text(item.finding),
 
-                              //         maxLines: 2,
+                                      maxLines: 2,
 
-                              //         overflow: TextOverflow.ellipsis,
+                                      overflow: TextOverflow.ellipsis,
 
-                              //         style: TextStyle(
-                              //           fontSize: 12,
+                                      style: TextStyle(
+                                        fontSize: 12,
 
-                              //           color: Colors.grey.shade700,
-                              //         ),
-                              //       ),
-                              //     ],
-                              //   ),
-                              // ),
+                                        color: Colors.grey.shade700,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
                         ),

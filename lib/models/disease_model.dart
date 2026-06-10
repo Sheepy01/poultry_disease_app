@@ -1,11 +1,11 @@
 class DiseaseModel {
   final String diseaseId;
 
-  final String displayName;
+  final Map<String, dynamic> displayName;
 
-  final String overview;
+  final Map<String, dynamic> overview;
 
-  final String mortality;
+  final Map<String, dynamic> mortality;
 
   final List<dynamic> symptoms;
 
@@ -13,9 +13,9 @@ class DiseaseModel {
 
   final Map<String, dynamic> images;
 
-  final String? treatment;
+  final Map<String, dynamic> treatment;
 
-  final List<dynamic>? differentialDiagnosis;
+  final List<dynamic> differentialDiagnosis;
 
   DiseaseModel({
     required this.diseaseId,
@@ -32,8 +32,8 @@ class DiseaseModel {
 
     required this.images,
 
-    this.treatment,
+    required this.treatment,
 
-    this.differentialDiagnosis,
+    required this.differentialDiagnosis,
   });
 }

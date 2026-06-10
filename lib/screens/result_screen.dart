@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 import '../services/pdf_service.dart';
+import '../utils/app_config.dart';
 
 class ResultScreen extends StatelessWidget {
   final File image;
@@ -40,6 +41,8 @@ class ResultScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final disease = diseaseData[result['disease']] ?? {};
+    final matchedFinding =
+        disease['images']?[result['matched_image']]?['finding'];
 
     return Scaffold(
       backgroundColor: const Color(0xFFF4F7FB),
@@ -120,7 +123,10 @@ class ResultScreen extends StatelessWidget {
                     const SizedBox(height: 10),
 
                     Text(
-                      disease['display_name']['hi'] ?? "Unknown Disease",
+                      AppConfig.text(
+                        disease['display_name'],
+                        fallback: "Unknown Disease",
+                      ),
 
                       style: const TextStyle(
                         color: Colors.white,
@@ -196,7 +202,10 @@ class ResultScreen extends StatelessWidget {
                     const SizedBox(height: 20),
 
                     Text(
-                      disease['overview'] ?? "No overview available.",
+                      AppConfig.text(
+                        disease['overview'],
+                        fallback: "No overview available.",
+                      ),
 
                       style: const TextStyle(
                         color: Colors.white,
@@ -222,8 +231,10 @@ class ResultScreen extends StatelessWidget {
                 color: Colors.orange,
 
                 child: Text(
-                  disease['images']?[result['matched_image']]?['finding'] ??
-                      "No finding available.",
+                  AppConfig.text(
+                    matchedFinding,
+                    fallback: "No finding available.",
+                  ),
 
                   style: const TextStyle(fontSize: 16, height: 1.5),
                 ),
@@ -255,7 +266,7 @@ class ResultScreen extends StatelessWidget {
                         ),
 
                         child: Text(
-                          symptom.toString(),
+                          AppConfig.text(symptom),
 
                           style: const TextStyle(fontWeight: FontWeight.w500),
                         ),
@@ -280,7 +291,7 @@ class ResultScreen extends StatelessWidget {
                     color: Colors.red,
 
                     child: Text(
-                      action.toString(),
+                      AppConfig.text(action),
 
                       style: const TextStyle(fontSize: 16),
                     ),
@@ -300,7 +311,7 @@ class ResultScreen extends StatelessWidget {
               //   color: Colors.deepPurple,
 
               //   child: Text(
-              //     disease['mortality'] ?? "Unknown",
+              //     AppConfig.text(disease['mortality'], fallback: "Unknown"),
 
               //     style: const TextStyle(
               //       fontSize: 18,
@@ -335,7 +346,7 @@ class ResultScreen extends StatelessWidget {
                     await pdfService.generateReport(
                       image: image,
 
-                      disease: disease['display_name'] ?? "Unknown Disease",
+                      disease: disease['display_name'] ?? const {},
 
                       confidence: result['confidence'].toString(),
 

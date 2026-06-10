@@ -17,7 +17,9 @@ class CatalogueService {
           CatalogueItem(
             disease: disease,
             imageName: imageName,
-            finding: imageData["finding"] ?? "No finding available",
+            finding: Map<String, dynamic>.from(
+              imageData["finding"] ?? const {},
+            ),
           ),
         );
       });
@@ -38,23 +40,29 @@ class CatalogueService {
     data.forEach((key, value) {
       diseases.add(
         DiseaseModel(
-          treatment: value['treatment'],
+          treatment: Map<String, dynamic>.from(value['treatment'] ?? const {}),
 
-          differentialDiagnosis: value['differential_diagnosis'],
+          differentialDiagnosis: List<dynamic>.from(
+            value['differential_diagnosis'] ?? const [],
+          ),
 
           diseaseId: key,
 
-          displayName: value['display_name'],
+          displayName: Map<String, dynamic>.from(
+            value['display_name'] ?? const {},
+          ),
 
-          overview: value['overview'],
+          overview: Map<String, dynamic>.from(value['overview'] ?? const {}),
 
-          mortality: value['mortality'],
+          mortality: Map<String, dynamic>.from(value['mortality'] ?? const {}),
 
-          symptoms: value['symptoms'],
+          symptoms: List<dynamic>.from(value['symptoms'] ?? const []),
 
-          immediateActions: value['immediate_actions'],
+          immediateActions: List<dynamic>.from(
+            value['immediate_actions'] ?? const [],
+          ),
 
-          images: value['images'],
+          images: Map<String, dynamic>.from(value['images'] ?? const {}),
         ),
       );
     });
