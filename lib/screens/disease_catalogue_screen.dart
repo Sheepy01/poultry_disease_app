@@ -129,7 +129,7 @@ class _DiseaseCatalogueScreenState extends State<DiseaseCatalogueScreen> {
 
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
+                          crossAxisCount: 3,
 
                           crossAxisSpacing: 12,
 
@@ -201,45 +201,45 @@ class _DiseaseCatalogueScreenState extends State<DiseaseCatalogueScreen> {
                                 ),
                               ),
 
-                              Padding(
-                                padding: const EdgeInsets.all(10),
+                              // Padding(
+                              //   padding: const EdgeInsets.all(10),
 
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                              //   child: Column(
+                              //     crossAxisAlignment: CrossAxisAlignment.start,
 
-                                  children: [
-                                    Text(
-                                      item.disease.displayName,
+                              //     children: [
+                              //       Text(
+                              //         item.disease.displayName,
 
-                                      maxLines: 1,
+                              //         maxLines: 1,
 
-                                      overflow: TextOverflow.ellipsis,
+                              //         overflow: TextOverflow.ellipsis,
 
-                                      style: const TextStyle(
-                                        fontWeight: FontWeight.bold,
+                              //         style: const TextStyle(
+                              //           fontWeight: FontWeight.bold,
 
-                                        fontSize: 14,
-                                      ),
-                                    ),
+                              //           fontSize: 14,
+                              //         ),
+                              //       ),
 
-                                    const SizedBox(height: 6),
+                              //       const SizedBox(height: 6),
 
-                                    Text(
-                                      item.finding,
+                              //       Text(
+                              //         item.finding,
 
-                                      maxLines: 2,
+                              //         maxLines: 2,
 
-                                      overflow: TextOverflow.ellipsis,
+                              //         overflow: TextOverflow.ellipsis,
 
-                                      style: TextStyle(
-                                        fontSize: 12,
+                              //         style: TextStyle(
+                              //           fontSize: 12,
 
-                                        color: Colors.grey.shade700,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                              //           color: Colors.grey.shade700,
+                              //         ),
+                              //       ),
+                              //     ],
+                              //   ),
+                              // ),
                             ],
                           ),
                         ),

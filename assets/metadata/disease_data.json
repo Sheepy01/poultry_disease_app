@@ -171,5 +171,133 @@
                 "finding": "Gross pathological changes characteristic of aflatoxicosis."
             }
         }
+    },
+    "reference_images": {
+        "display_name": "Reference Image",
+        "overview": "No disease information available for this image.",
+        "mortality": "N/A",
+        "symptoms": [],
+        "treatment": "No information available.",
+        "immediate_actions": [],
+        "differential_diagnosis": [],
+        "images": {
+            "image1.png": {
+                "finding": "No information available."
+            },
+            "image2.png": {
+                "finding": "No information available."
+            },
+            "image3.png": {
+                "finding": "No information available."
+            },
+            "image4.png": {
+                "finding": "No information available."
+            },
+            "image5.png": {
+                "finding": "No information available."
+            },
+            "image6.png": {
+                "finding": "No information available."
+            },
+            "image7.png": {
+                "finding": "No information available."
+            },
+            "image8.png": {
+                "finding": "No information available."
+            },
+            "image9.png": {
+                "finding": "No information available."
+            },
+            "image10.png": {
+                "finding": "No information available."
+            },
+            "image11.png": {
+                "finding": "No information available."
+            },
+            "image12.png": {
+                "finding": "No information available."
+            },
+            "image13.png": {
+                "finding": "No information available."
+            },
+            "image14.png": {
+                "finding": "No information available."
+            },
+            "image15.png": {
+                "finding": "No information available."
+            },
+            "image16.png": {
+                "finding": "No information available."
+            },
+            "image17.png": {
+                "finding": "No information available."
+            },
+            "image18.png": {
+                "finding": "No information available."
+            },
+            "image19.png": {
+                "finding": "No information available."
+            },
+            "image20.png": {
+                "finding": "No information available."
+            },
+            "image21.jpeg": {
+                "finding": "No information available."
+            },
+            "image22.png": {
+                "finding": "No information available."
+            },
+            "image23.png": {
+                "finding": "No information available."
+            },
+            "image24.png": {
+                "finding": "No information available."
+            },
+            "image25.png": {
+                "finding": "No information available."
+            },
+            "image26.png": {
+                "finding": "No information available."
+            },
+            "image27.png": {
+                "finding": "No information available."
+            },
+            "image28.png": {
+                "finding": "No information available."
+            },
+            "image29.png": {
+                "finding": "No information available."
+            },
+            "image30.jpeg": {
+                "finding": "No information available."
+            },
+            "image31.png": {
+                "finding": "No information available."
+            },
+            "image32.png": {
+                "finding": "No information available."
+            },
+            "image33.png": {
+                "finding": "No information available."
+            },
+            "image34.png": {
+                "finding": "No information available."
+            },
+            "image35.png": {
+                "finding": "No information available."
+            },
+            "image36.png": {
+                "finding": "No information available."
+            },
+            "image37.png": {
+                "finding": "No information available."
+            },
+            "image38.png": {
+                "finding": "No information available."
+            },
+            "image39.png": {
+                "finding": "No information available."
+            }
+        }
     }
 }

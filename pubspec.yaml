@@ -65,6 +65,7 @@ flutter:
   assets:
     - assets/dataset/newcastle_disease/
     - assets/dataset/aflatoxicosis/
+    - assets/dataset/reference_images/
     - assets/metadata/
     - assets/images/
     - assets/models/
