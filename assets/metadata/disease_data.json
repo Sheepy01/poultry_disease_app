@@ -1,687 +1,771 @@
 {
-  "newcastle_disease": {
-    "display_name": {
-      "en": "Newcastle Disease",
-      "hi": "रानीखेत रोग"
+    "newcastle_disease": {
+        "display_name": {
+            "en": "Newcastle Disease",
+            "hi": "रानीखेत रोग"
+        },
+        "overview": {
+            "en": "Newcastle disease is a highly contagious viral disease affecting poultry birds. It spreads rapidly and may cause severe mortality.",
+            "hi": "न्यूकैसल रोग पोल्ट्री पक्षियों को प्रभावित करने वाला अत्यधिक संक्रामक वायरल रोग है। यह तेजी से फैलता है और गंभीर मृत्यु दर का कारण बन सकता है।"
+        },
+        "mortality": {
+            "en": "Very High (>90%)",
+            "hi": "बहुत अधिक (>90%)"
+        },
+        "symptoms": [
+            {
+                "en": "Twisted neck",
+                "hi": "गर्दन का मुड़ना"
+            },
+            {
+                "en": "Green-white diarrhea",
+                "hi": "हरे-सफेद रंग का दस्त"
+            },
+            {
+                "en": "Facial swelling",
+                "hi": "चेहरे पर सूजन"
+            },
+            {
+                "en": "Paralysis of legs or wings",
+                "hi": "पैरों या पंखों का लकवा"
+            },
+            {
+                "en": "Respiratory distress",
+                "hi": "सांस लेने में कठिनाई"
+            },
+            {
+                "en": "Drooping wings",
+                "hi": "पंखों का लटकना"
+            },
+            {
+                "en": "Open-mouth breathing",
+                "hi": "मुंह खोलकर सांस लेना"
+            },
+            {
+                "en": "Bluish comb",
+                "hi": "कलगी का नीला पड़ना"
+            },
+            {
+                "en": "Depression",
+                "hi": "सुस्ती और उदासी"
+            },
+            {
+                "en": "Foamy nasal discharge",
+                "hi": "नाक से झागदार स्राव"
+            },
+            {
+                "en": "Coughing",
+                "hi": "खांसी"
+            },
+            {
+                "en": "Sneezing",
+                "hi": "छींकना"
+            },
+            {
+                "en": "Reduced feed intake",
+                "hi": "चारे का सेवन कम होना"
+            },
+            {
+                "en": "Sudden drop in egg production",
+                "hi": "अंडा उत्पादन में अचानक कमी"
+            },
+            {
+                "en": "Thin-shelled eggs",
+                "hi": "पतले छिलके वाले अंडे"
+            }
+        ],
+        "treatment": {
+            "en": "No specific treatment is available for Newcastle disease.",
+            "hi": "न्यूकैसल रोग के लिए कोई विशिष्ट उपचार उपलब्ध नहीं है।"
+        },
+        "immediate_actions": [
+            {
+                "en": "Isolate infected birds",
+                "hi": "संक्रमित पक्षियों को अलग करें"
+            },
+            {
+                "en": "Disinfect the farm",
+                "hi": "फार्म को कीटाणुरहित करें"
+            },
+            {
+                "en": "Consult veterinarian immediately",
+                "hi": "तुरंत पशु चिकित्सक से परामर्श करें"
+            },
+            {
+                "en": "Restrict visitor access",
+                "hi": "बाहरी लोगों का प्रवेश सीमित करें"
+            },
+            {
+                "en": "Safely dispose dead birds",
+                "hi": "मृत पक्षियों का सुरक्षित निपटान करें"
+            }
+        ],
+        "differential_diagnosis": [
+            {
+                "en": "Infectious Bronchitis",
+                "hi": "संक्रामक ब्रोंकाइटिस"
+            },
+            {
+                "en": "Fowl Cholera",
+                "hi": "फाउल कॉलरा"
+            },
+            {
+                "en": "Mycoplasmosis",
+                "hi": "माइकोप्लाज्मोसिस"
+            },
+            {
+                "en": "Infectious Coryza",
+                "hi": "संक्रामक कोराइजा"
+            }
+        ],
+        "images": {
+            "newcastle_1.jpg": {
+                "finding": {
+                    "en": "Green-white mucous diarrhea observed.",
+                    "hi": "हरा-सफेद श्लेष्मायुक्त दस्त देखा गया।"
+                }
+            },
+            "newcastle_2.jpg": {
+                "finding": {
+                    "en": "Facial swelling observed.",
+                    "hi": "चेहरे पर सूजन देखी गई।"
+                }
+            },
+            "newcastle_3.jpg": {
+                "finding": {
+                    "en": "Twisted neck (torticollis) observed.",
+                    "hi": "गर्दन का मुड़ना (टॉर्टिकॉलिस) देखा गया।"
+                }
+            },
+            "newcastle_4.jpg": {
+                "finding": {
+                    "en": "Paralysis of legs observed.",
+                    "hi": "पैरों का लकवा देखा गया।"
+                }
+            },
+            "newcastle_5.jpg": {
+                "finding": {
+                    "en": "Drooping wing observed.",
+                    "hi": "पंख का लटकना देखा गया।"
+                }
+            },
+            "newcastle_6.jpg": {
+                "finding": {
+                    "en": "Head turned backward (opisthotonos) observed.",
+                    "hi": "सिर पीछे की ओर मुड़ा हुआ (ओपिस्थोटोनोस) देखा गया।"
+                }
+            },
+            "newcastle_7.jpg": {
+                "finding": {
+                    "en": "Swollen comb with necrotic tissue.",
+                    "hi": "कलगी में सूजन और मृत ऊतक दिखाई दिए।"
+                }
+            },
+            "newcastle_8.jpg": {
+                "finding": {
+                    "en": "Bluish discolored comb with necrotic tissue.",
+                    "hi": "मृत ऊतक के साथ कलगी का नीला रंग परिवर्तन दिखाई दिया।"
+                }
+            },
+            "newcastle_9.jpg": {
+                "finding": {
+                    "en": "Pinpoint hemorrhages in the proventriculus.",
+                    "hi": "प्रोवेंट्रिकुलस में बिंदुनुमा रक्तस्राव।"
+                }
+            },
+            "newcastle_10.jpg": {
+                "finding": {
+                    "en": "Pinpoint hemorrhages in the proventriculus.",
+                    "hi": "प्रोवेंट्रिकुलस में बिंदुनुमा रक्तस्राव।"
+                }
+            },
+            "newcastle_11.jpg": {
+                "finding": {
+                    "en": "Severe congestion and inflammation of the trachea.",
+                    "hi": "श्वासनली में गंभीर रक्तसंचय और सूजन।"
+                }
+            },
+            "newcastle_12.jpg": {
+                "finding": {
+                    "en": "Pinpoint hemorrhages in the small intestine.",
+                    "hi": "छोटी आंत में बिंदुनुमा रक्तस्राव।"
+                }
+            },
+            "newcastle_13.jpg": {
+                "finding": {
+                    "en": "Pinpoint hemorrhages in the small intestine.",
+                    "hi": "छोटी आंत में बिंदुनुमा रक्तस्राव।"
+                }
+            },
+            "newcastle_14.jpg": {
+                "finding": {
+                    "en": "Very high flock mortality (>90%).",
+                    "hi": "झुंड में बहुत अधिक मृत्यु दर (>90%)।"
+                }
+            },
+            "newcastle_15.jpg": {
+                "finding": {
+                    "en": "Pinpoint hemorrhages in the small intestine.",
+                    "hi": "छोटी आंत में बिंदुनुमा रक्तस्राव।"
+                }
+            },
+            "newcastle_16.jpg": {
+                "finding": {
+                    "en": "Pinpoint hemorrhages in the small intestine.",
+                    "hi": "छोटी आंत में बिंदुनुमा रक्तस्राव।"
+                }
+            },
+            "newcastle_17.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_18.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_19.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_20.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_21.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_22.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_23.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_24.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_25.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_26.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_27.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_28.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_29.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_30.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_31.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_32.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_33.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_34.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_35.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "newcastle_36.jpg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            }
+        }
     },
-    "overview": {
-      "en": "Newcastle disease is a highly contagious viral disease affecting poultry birds. It spreads rapidly and may cause severe mortality.",
-      "hi": "न्यूकैसल रोग पोल्ट्री पक्षियों को प्रभावित करने वाला अत्यधिक संक्रामक वायरल रोग है। यह तेजी से फैलता है और गंभीर मृत्यु दर का कारण बन सकता है।"
+    "aflatoxicosis": {
+        "display_name": {
+            "en": "Aflatoxicosis",
+            "hi": "अफ्लाटॉक्सिकोसिस"
+        },
+        "overview": {
+            "en": "A toxin-related disease caused by aflatoxin-contaminated feed. It primarily damages the liver and can result in poor growth, weakness, and significant mortality in poultry.",
+            "hi": "अफ्लाटॉक्सिन-दूषित चारे से होने वाला विष-संबंधी रोग। यह मुख्य रूप से यकृत को नुकसान पहुंचाता है और पोल्ट्री में खराब वृद्धि, कमजोरी तथा उल्लेखनीय मृत्यु दर का कारण बन सकता है।"
+        },
+        "mortality": {
+            "en": "Moderate to High depending on toxin exposure",
+            "hi": "विष के संपर्क की मात्रा के अनुसार मध्यम से अधिक"
+        },
+        "symptoms": [
+            {
+                "en": "Weakness",
+                "hi": "कमजोरी"
+            },
+            {
+                "en": "Poor growth",
+                "hi": "विकास कम होना"
+            },
+            {
+                "en": "Unthriftiness",
+                "hi": "कमजोर और अस्वस्थ वृद्धि"
+            },
+            {
+                "en": "High morbidity",
+                "hi": "रोगग्रस्तता अधिक होना"
+            },
+            {
+                "en": "High mortality",
+                "hi": "मृत्यु दर अधिक होना"
+            },
+            {
+                "en": "Depression",
+                "hi": "सुस्ती और उदासी"
+            },
+            {
+                "en": "Reduced feed efficiency",
+                "hi": "चारे की उपयोग क्षमता कम होना"
+            }
+        ],
+        "treatment": {
+            "en": "No specific treatment is available. Remove contaminated feed and provide supportive care.",
+            "hi": "कोई विशिष्ट उपचार उपलब्ध नहीं है। दूषित चारा हटाएं और सहायक देखभाल दें।"
+        },
+        "immediate_actions": [
+            {
+                "en": "Remove contaminated feed immediately",
+                "hi": "दूषित चारा तुरंत हटाएं"
+            },
+            {
+                "en": "Provide clean uncontaminated feed",
+                "hi": "स्वच्छ और अदूषित चारा दें"
+            },
+            {
+                "en": "Supplement Vitamin E",
+                "hi": "विटामिन ई पूरक दें"
+            },
+            {
+                "en": "Supplement Vitamin C",
+                "hi": "विटामिन सी पूरक दें"
+            },
+            {
+                "en": "Supplement Selenium",
+                "hi": "सेलेनियम पूरक दें"
+            },
+            {
+                "en": "Treat secondary infections",
+                "hi": "द्वितीयक संक्रमणों का उपचार करें"
+            },
+            {
+                "en": "Improve farm management",
+                "hi": "फार्म प्रबंधन में सुधार करें"
+            },
+            {
+                "en": "Provide activated charcoal if recommended",
+                "hi": "सलाह मिलने पर एक्टिवेटेड चारकोल दें"
+            }
+        ],
+        "differential_diagnosis": [
+            {
+                "en": "Fatty Liver Syndrome",
+                "hi": "फैटी लिवर सिंड्रोम"
+            },
+            {
+                "en": "Hepatitis",
+                "hi": "हेपेटाइटिस"
+            },
+            {
+                "en": "Feed Toxicity",
+                "hi": "चारा विषाक्तता"
+            },
+            {
+                "en": "Nutritional Deficiencies",
+                "hi": "पोषण संबंधी कमियां"
+            }
+        ],
+        "images": {
+            "aflatoxicosis_1.png": {
+                "finding": {
+                    "en": "Bird lying on abdomen with legs extended backward.",
+                    "hi": "पक्षी पेट के बल लेटा हुआ है और पैर पीछे की ओर फैले हुए हैं।"
+                }
+            },
+            "aflatoxicosis_2.png": {
+                "finding": {
+                    "en": "Liver enlargement and discoloration observed.",
+                    "hi": "यकृत का बढ़ना और रंग परिवर्तन देखा गया।"
+                }
+            },
+            "aflatoxicosis_3.png": {
+                "finding": {
+                    "en": "Yellow fatty liver due to lipid accumulation.",
+                    "hi": "वसा जमा होने के कारण पीला वसायुक्त यकृत।"
+                }
+            },
+            "aflatoxicosis_4.png": {
+                "finding": {
+                    "en": "Congested liver with reddish discoloration.",
+                    "hi": "लालिमा लिए रंग परिवर्तन के साथ रक्तसंचययुक्त यकृत।"
+                }
+            },
+            "aflatoxicosis_5.png": {
+                "finding": {
+                    "en": "Multiple hemorrhagic lesions in the liver.",
+                    "hi": "यकृत में अनेक रक्तस्रावी घाव।"
+                }
+            },
+            "aflatoxicosis_6.png": {
+                "finding": {
+                    "en": "Diffuse liver congestion associated with aflatoxin toxicity.",
+                    "hi": "अफ्लाटॉक्सिन विषाक्तता से संबंधित यकृत में व्यापक रक्तसंचय।"
+                }
+            },
+            "aflatoxicosis_7.png": {
+                "finding": {
+                    "en": "Enlarged pale-yellow liver indicative of fatty degeneration.",
+                    "hi": "वसायुक्त अपक्षय का संकेत देने वाला बढ़ा हुआ फीका-पीला यकृत।"
+                }
+            },
+            "aflatoxicosis_8.png": {
+                "finding": {
+                    "en": "Severe hepatic damage caused by aflatoxin exposure.",
+                    "hi": "अफ्लाटॉक्सिन के संपर्क से हुआ गंभीर यकृत नुकसान।"
+                }
+            },
+            "aflatoxicosis_9.png": {
+                "finding": {
+                    "en": "Liver showing chronic aflatoxicosis changes.",
+                    "hi": "यकृत में दीर्घकालिक अफ्लाटॉक्सिकोसिस से संबंधित परिवर्तन दिखाई दे रहे हैं।"
+                }
+            },
+            "aflatoxicosis_10.png": {
+                "finding": {
+                    "en": "Yellow to gray liver discoloration.",
+                    "hi": "यकृत का पीले से धूसर रंग में परिवर्तन।"
+                }
+            },
+            "aflatoxicosis_11.png": {
+                "finding": {
+                    "en": "Atrophied liver associated with chronic aflatoxicosis.",
+                    "hi": "दीर्घकालिक अफ्लाटॉक्सिकोसिस से संबंधित संकुचित यकृत।"
+                }
+            },
+            "aflatoxicosis_12.png": {
+                "finding": {
+                    "en": "Hemorrhagic lesions observed in liver tissue.",
+                    "hi": "यकृत ऊतक में रक्तस्रावी घाव देखे गए।"
+                }
+            },
+            "aflatoxicosis_13.png": {
+                "finding": {
+                    "en": "Muscular hemorrhages associated with aflatoxin poisoning.",
+                    "hi": "अफ्लाटॉक्सिन विषाक्तता से संबंधित मांसपेशीय रक्तस्राव।"
+                }
+            },
+            "aflatoxicosis_14.png": {
+                "finding": {
+                    "en": "Extensive liver degeneration and fatty infiltration.",
+                    "hi": "यकृत का व्यापक अपक्षय और वसायुक्त जमाव।"
+                }
+            },
+            "aflatoxicosis_15.png": {
+                "finding": {
+                    "en": "Chronic liver damage due to prolonged aflatoxin exposure.",
+                    "hi": "लंबे समय तक अफ्लाटॉक्सिन के संपर्क से दीर्घकालिक यकृत नुकसान।"
+                }
+            },
+            "aflatoxicosis_16.png": {
+                "finding": {
+                    "en": "Severe hepatic pathology consistent with aflatoxicosis.",
+                    "hi": "अफ्लाटॉक्सिकोसिस के अनुरूप गंभीर यकृत विकृति।"
+                }
+            },
+            "aflatoxicosis_17.png": {
+                "finding": {
+                    "en": "Advanced liver lesions with discoloration and degeneration.",
+                    "hi": "रंग परिवर्तन और अपक्षय के साथ उन्नत यकृत घाव।"
+                }
+            },
+            "aflatoxicosis_18.png": {
+                "finding": {
+                    "en": "Gross pathological changes characteristic of aflatoxicosis.",
+                    "hi": "अफ्लाटॉक्सिकोसिस की विशेषता वाले स्थूल रोगात्मक परिवर्तन।"
+                }
+            }
+        }
     },
-    "mortality": {
-      "en": "Very High (>90%)",
-      "hi": "बहुत अधिक (>90%)"
-    },
-    "symptoms": [
-      {
-        "en": "Twisted neck",
-        "hi": "गर्दन का मुड़ना"
-      },
-      {
-        "en": "Green-white diarrhea",
-        "hi": "हरे-सफेद रंग का दस्त"
-      },
-      {
-        "en": "Facial swelling",
-        "hi": "चेहरे पर सूजन"
-      },
-      {
-        "en": "Paralysis of legs or wings",
-        "hi": "पैरों या पंखों का लकवा"
-      },
-      {
-        "en": "Respiratory distress",
-        "hi": "सांस लेने में कठिनाई"
-      },
-      {
-        "en": "Drooping wings",
-        "hi": "पंखों का लटकना"
-      },
-      {
-        "en": "Open-mouth breathing",
-        "hi": "मुंह खोलकर सांस लेना"
-      },
-      {
-        "en": "Bluish comb",
-        "hi": "कलगी का नीला पड़ना"
-      },
-      {
-        "en": "Depression",
-        "hi": "सुस्ती और उदासी"
-      },
-      {
-        "en": "Foamy nasal discharge",
-        "hi": "नाक से झागदार स्राव"
-      },
-      {
-        "en": "Coughing",
-        "hi": "खांसी"
-      },
-      {
-        "en": "Sneezing",
-        "hi": "छींकना"
-      },
-      {
-        "en": "Reduced feed intake",
-        "hi": "चारे का सेवन कम होना"
-      },
-      {
-        "en": "Sudden drop in egg production",
-        "hi": "अंडा उत्पादन में अचानक कमी"
-      },
-      {
-        "en": "Thin-shelled eggs",
-        "hi": "पतले छिलके वाले अंडे"
-      }
-    ],
-    "treatment": {
-      "en": "No specific treatment is available for Newcastle disease.",
-      "hi": "न्यूकैसल रोग के लिए कोई विशिष्ट उपचार उपलब्ध नहीं है।"
-    },
-    "immediate_actions": [
-      {
-        "en": "Isolate infected birds",
-        "hi": "संक्रमित पक्षियों को अलग करें"
-      },
-      {
-        "en": "Disinfect the farm",
-        "hi": "फार्म को कीटाणुरहित करें"
-      },
-      {
-        "en": "Consult veterinarian immediately",
-        "hi": "तुरंत पशु चिकित्सक से परामर्श करें"
-      },
-      {
-        "en": "Restrict visitor access",
-        "hi": "बाहरी लोगों का प्रवेश सीमित करें"
-      },
-      {
-        "en": "Safely dispose dead birds",
-        "hi": "मृत पक्षियों का सुरक्षित निपटान करें"
-      }
-    ],
-    "differential_diagnosis": [
-      {
-        "en": "Infectious Bronchitis",
-        "hi": "संक्रामक ब्रोंकाइटिस"
-      },
-      {
-        "en": "Fowl Cholera",
-        "hi": "फाउल कॉलरा"
-      },
-      {
-        "en": "Mycoplasmosis",
-        "hi": "माइकोप्लाज्मोसिस"
-      },
-      {
-        "en": "Infectious Coryza",
-        "hi": "संक्रामक कोराइजा"
-      }
-    ],
-    "images": {
-      "newcastle_1.jpg": {
-        "finding": {
-          "en": "Green-white mucous diarrhea observed.",
-          "hi": "हरा-सफेद श्लेष्मायुक्त दस्त देखा गया।"
+    "reference_images": {
+        "display_name": {
+            "en": "Reference Image",
+            "hi": "संदर्भ छवि"
+        },
+        "overview": {
+            "en": "No disease information available for this image.",
+            "hi": "इस छवि के लिए रोग संबंधी जानकारी उपलब्ध नहीं है।"
+        },
+        "mortality": {
+            "en": "N/A",
+            "hi": "लागू नहीं"
+        },
+        "symptoms": [],
+        "treatment": {
+            "en": "No information available.",
+            "hi": "कोई जानकारी उपलब्ध नहीं है।"
+        },
+        "immediate_actions": [],
+        "differential_diagnosis": [],
+        "images": {
+            "image1.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image2.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image3.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image4.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image5.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image6.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image7.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image8.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image9.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image10.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image11.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image12.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image13.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image14.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image15.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image16.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image17.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image18.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image19.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image20.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image21.jpeg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image22.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image23.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image24.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image25.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image26.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image27.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image28.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image29.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image30.jpeg": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image31.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image32.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            },
+            "image33.png": {
+                "finding": {
+                    "en": "No information available.",
+                    "hi": "कोई जानकारी उपलब्ध नहीं है।"
+                }
+            }
         }
-      },
-      "newcastle_2.jpg": {
-        "finding": {
-          "en": "Facial swelling observed.",
-          "hi": "चेहरे पर सूजन देखी गई।"
-        }
-      },
-      "newcastle_3.jpg": {
-        "finding": {
-          "en": "Twisted neck (torticollis) observed.",
-          "hi": "गर्दन का मुड़ना (टॉर्टिकॉलिस) देखा गया।"
-        }
-      },
-      "newcastle_4.jpg": {
-        "finding": {
-          "en": "Paralysis of legs observed.",
-          "hi": "पैरों का लकवा देखा गया।"
-        }
-      },
-      "newcastle_5.jpg": {
-        "finding": {
-          "en": "Drooping wing observed.",
-          "hi": "पंख का लटकना देखा गया।"
-        }
-      },
-      "newcastle_6.jpg": {
-        "finding": {
-          "en": "Head turned backward (opisthotonos) observed.",
-          "hi": "सिर पीछे की ओर मुड़ा हुआ (ओपिस्थोटोनोस) देखा गया।"
-        }
-      },
-      "newcastle_7.jpg": {
-        "finding": {
-          "en": "Swollen comb with necrotic tissue.",
-          "hi": "कलगी में सूजन और मृत ऊतक दिखाई दिए।"
-        }
-      },
-      "newcastle_8.jpg": {
-        "finding": {
-          "en": "Bluish discolored comb with necrotic tissue.",
-          "hi": "मृत ऊतक के साथ कलगी का नीला रंग परिवर्तन दिखाई दिया।"
-        }
-      },
-      "newcastle_9.jpg": {
-        "finding": {
-          "en": "Pinpoint hemorrhages in the proventriculus.",
-          "hi": "प्रोवेंट्रिकुलस में बिंदुनुमा रक्तस्राव।"
-        }
-      },
-      "newcastle_10.jpg": {
-        "finding": {
-          "en": "Pinpoint hemorrhages in the proventriculus.",
-          "hi": "प्रोवेंट्रिकुलस में बिंदुनुमा रक्तस्राव।"
-        }
-      },
-      "newcastle_11.jpg": {
-        "finding": {
-          "en": "Severe congestion and inflammation of the trachea.",
-          "hi": "श्वासनली में गंभीर रक्तसंचय और सूजन।"
-        }
-      },
-      "newcastle_12.jpg": {
-        "finding": {
-          "en": "Pinpoint hemorrhages in the small intestine.",
-          "hi": "छोटी आंत में बिंदुनुमा रक्तस्राव।"
-        }
-      },
-      "newcastle_13.jpg": {
-        "finding": {
-          "en": "Pinpoint hemorrhages in the small intestine.",
-          "hi": "छोटी आंत में बिंदुनुमा रक्तस्राव।"
-        }
-      },
-      "newcastle_14.jpg": {
-        "finding": {
-          "en": "Very high flock mortality (>90%).",
-          "hi": "झुंड में बहुत अधिक मृत्यु दर (>90%)।"
-        }
-      },
-      "newcastle_15.jpg": {
-        "finding": {
-          "en": "Pinpoint hemorrhages in the small intestine.",
-          "hi": "छोटी आंत में बिंदुनुमा रक्तस्राव।"
-        }
-      },
-      "newcastle_16.jpg": {
-        "finding": {
-          "en": "Pinpoint hemorrhages in the small intestine.",
-          "hi": "छोटी आंत में बिंदुनुमा रक्तस्राव।"
-        }
-      }
     }
-  },
-  "aflatoxicosis": {
-    "display_name": {
-      "en": "Aflatoxicosis",
-      "hi": "अफ्लाटॉक्सिकोसिस"
-    },
-    "overview": {
-      "en": "A toxin-related disease caused by aflatoxin-contaminated feed. It primarily damages the liver and can result in poor growth, weakness, and significant mortality in poultry.",
-      "hi": "अफ्लाटॉक्सिन-दूषित चारे से होने वाला विष-संबंधी रोग। यह मुख्य रूप से यकृत को नुकसान पहुंचाता है और पोल्ट्री में खराब वृद्धि, कमजोरी तथा उल्लेखनीय मृत्यु दर का कारण बन सकता है।"
-    },
-    "mortality": {
-      "en": "Moderate to High depending on toxin exposure",
-      "hi": "विष के संपर्क की मात्रा के अनुसार मध्यम से अधिक"
-    },
-    "symptoms": [
-      {
-        "en": "Weakness",
-        "hi": "कमजोरी"
-      },
-      {
-        "en": "Poor growth",
-        "hi": "विकास कम होना"
-      },
-      {
-        "en": "Unthriftiness",
-        "hi": "कमजोर और अस्वस्थ वृद्धि"
-      },
-      {
-        "en": "High morbidity",
-        "hi": "रोगग्रस्तता अधिक होना"
-      },
-      {
-        "en": "High mortality",
-        "hi": "मृत्यु दर अधिक होना"
-      },
-      {
-        "en": "Depression",
-        "hi": "सुस्ती और उदासी"
-      },
-      {
-        "en": "Reduced feed efficiency",
-        "hi": "चारे की उपयोग क्षमता कम होना"
-      }
-    ],
-    "treatment": {
-      "en": "No specific treatment is available. Remove contaminated feed and provide supportive care.",
-      "hi": "कोई विशिष्ट उपचार उपलब्ध नहीं है। दूषित चारा हटाएं और सहायक देखभाल दें।"
-    },
-    "immediate_actions": [
-      {
-        "en": "Remove contaminated feed immediately",
-        "hi": "दूषित चारा तुरंत हटाएं"
-      },
-      {
-        "en": "Provide clean uncontaminated feed",
-        "hi": "स्वच्छ और अदूषित चारा दें"
-      },
-      {
-        "en": "Supplement Vitamin E",
-        "hi": "विटामिन ई पूरक दें"
-      },
-      {
-        "en": "Supplement Vitamin C",
-        "hi": "विटामिन सी पूरक दें"
-      },
-      {
-        "en": "Supplement Selenium",
-        "hi": "सेलेनियम पूरक दें"
-      },
-      {
-        "en": "Treat secondary infections",
-        "hi": "द्वितीयक संक्रमणों का उपचार करें"
-      },
-      {
-        "en": "Improve farm management",
-        "hi": "फार्म प्रबंधन में सुधार करें"
-      },
-      {
-        "en": "Provide activated charcoal if recommended",
-        "hi": "सलाह मिलने पर एक्टिवेटेड चारकोल दें"
-      }
-    ],
-    "differential_diagnosis": [
-      {
-        "en": "Fatty Liver Syndrome",
-        "hi": "फैटी लिवर सिंड्रोम"
-      },
-      {
-        "en": "Hepatitis",
-        "hi": "हेपेटाइटिस"
-      },
-      {
-        "en": "Feed Toxicity",
-        "hi": "चारा विषाक्तता"
-      },
-      {
-        "en": "Nutritional Deficiencies",
-        "hi": "पोषण संबंधी कमियां"
-      }
-    ],
-    "images": {
-      "aflatoxicosis_1.png": {
-        "finding": {
-          "en": "Bird lying on abdomen with legs extended backward.",
-          "hi": "पक्षी पेट के बल लेटा हुआ है और पैर पीछे की ओर फैले हुए हैं।"
-        }
-      },
-      "aflatoxicosis_2.png": {
-        "finding": {
-          "en": "Liver enlargement and discoloration observed.",
-          "hi": "यकृत का बढ़ना और रंग परिवर्तन देखा गया।"
-        }
-      },
-      "aflatoxicosis_3.png": {
-        "finding": {
-          "en": "Yellow fatty liver due to lipid accumulation.",
-          "hi": "वसा जमा होने के कारण पीला वसायुक्त यकृत।"
-        }
-      },
-      "aflatoxicosis_4.png": {
-        "finding": {
-          "en": "Congested liver with reddish discoloration.",
-          "hi": "लालिमा लिए रंग परिवर्तन के साथ रक्तसंचययुक्त यकृत।"
-        }
-      },
-      "aflatoxicosis_5.png": {
-        "finding": {
-          "en": "Multiple hemorrhagic lesions in the liver.",
-          "hi": "यकृत में अनेक रक्तस्रावी घाव।"
-        }
-      },
-      "aflatoxicosis_6.png": {
-        "finding": {
-          "en": "Diffuse liver congestion associated with aflatoxin toxicity.",
-          "hi": "अफ्लाटॉक्सिन विषाक्तता से संबंधित यकृत में व्यापक रक्तसंचय।"
-        }
-      },
-      "aflatoxicosis_7.png": {
-        "finding": {
-          "en": "Enlarged pale-yellow liver indicative of fatty degeneration.",
-          "hi": "वसायुक्त अपक्षय का संकेत देने वाला बढ़ा हुआ फीका-पीला यकृत।"
-        }
-      },
-      "aflatoxicosis_8.png": {
-        "finding": {
-          "en": "Severe hepatic damage caused by aflatoxin exposure.",
-          "hi": "अफ्लाटॉक्सिन के संपर्क से हुआ गंभीर यकृत नुकसान।"
-        }
-      },
-      "aflatoxicosis_9.png": {
-        "finding": {
-          "en": "Liver showing chronic aflatoxicosis changes.",
-          "hi": "यकृत में दीर्घकालिक अफ्लाटॉक्सिकोसिस से संबंधित परिवर्तन दिखाई दे रहे हैं।"
-        }
-      },
-      "aflatoxicosis_10.png": {
-        "finding": {
-          "en": "Yellow to gray liver discoloration.",
-          "hi": "यकृत का पीले से धूसर रंग में परिवर्तन।"
-        }
-      },
-      "aflatoxicosis_11.png": {
-        "finding": {
-          "en": "Atrophied liver associated with chronic aflatoxicosis.",
-          "hi": "दीर्घकालिक अफ्लाटॉक्सिकोसिस से संबंधित संकुचित यकृत।"
-        }
-      },
-      "aflatoxicosis_12.png": {
-        "finding": {
-          "en": "Hemorrhagic lesions observed in liver tissue.",
-          "hi": "यकृत ऊतक में रक्तस्रावी घाव देखे गए।"
-        }
-      },
-      "aflatoxicosis_13.png": {
-        "finding": {
-          "en": "Muscular hemorrhages associated with aflatoxin poisoning.",
-          "hi": "अफ्लाटॉक्सिन विषाक्तता से संबंधित मांसपेशीय रक्तस्राव।"
-        }
-      },
-      "aflatoxicosis_14.png": {
-        "finding": {
-          "en": "Extensive liver degeneration and fatty infiltration.",
-          "hi": "यकृत का व्यापक अपक्षय और वसायुक्त जमाव।"
-        }
-      },
-      "aflatoxicosis_15.png": {
-        "finding": {
-          "en": "Chronic liver damage due to prolonged aflatoxin exposure.",
-          "hi": "लंबे समय तक अफ्लाटॉक्सिन के संपर्क से दीर्घकालिक यकृत नुकसान।"
-        }
-      },
-      "aflatoxicosis_16.png": {
-        "finding": {
-          "en": "Severe hepatic pathology consistent with aflatoxicosis.",
-          "hi": "अफ्लाटॉक्सिकोसिस के अनुरूप गंभीर यकृत विकृति।"
-        }
-      },
-      "aflatoxicosis_17.png": {
-        "finding": {
-          "en": "Advanced liver lesions with discoloration and degeneration.",
-          "hi": "रंग परिवर्तन और अपक्षय के साथ उन्नत यकृत घाव।"
-        }
-      },
-      "aflatoxicosis_18.png": {
-        "finding": {
-          "en": "Gross pathological changes characteristic of aflatoxicosis.",
-          "hi": "अफ्लाटॉक्सिकोसिस की विशेषता वाले स्थूल रोगात्मक परिवर्तन।"
-        }
-      }
-    }
-  },
-  "reference_images": {
-    "display_name": {
-      "en": "Reference Image",
-      "hi": "संदर्भ छवि"
-    },
-    "overview": {
-      "en": "No disease information available for this image.",
-      "hi": "इस छवि के लिए रोग संबंधी जानकारी उपलब्ध नहीं है।"
-    },
-    "mortality": {
-      "en": "N/A",
-      "hi": "लागू नहीं"
-    },
-    "symptoms": [],
-    "treatment": {
-      "en": "No information available.",
-      "hi": "कोई जानकारी उपलब्ध नहीं है।"
-    },
-    "immediate_actions": [],
-    "differential_diagnosis": [],
-    "images": {
-      "image1.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image2.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image3.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image4.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image5.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image6.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image7.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image8.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image9.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image10.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image11.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image12.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image13.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image14.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image15.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image16.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image17.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image18.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image19.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image20.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image21.jpeg": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image22.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image23.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image24.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image25.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image26.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image27.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image28.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image29.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image30.jpeg": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image31.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image32.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image33.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image34.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image35.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image36.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image37.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image38.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      },
-      "image39.png": {
-        "finding": {
-          "en": "No information available.",
-          "hi": "कोई जानकारी उपलब्ध नहीं है।"
-        }
-      }
-    }
-  }
 }
